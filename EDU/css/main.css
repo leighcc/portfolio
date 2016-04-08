@@ -1,7 +1,7 @@
 /*可以放这里作统一样式的：box-shadow inline-block元素对称分布 文字用微软雅黑*/
 html {background-color: #f8f8f8;}
 body, p {margin: 0;}
-.u-btn {background: url(../img/sprite.png) no-repeat;display: inline-block;}
+.u-btn {background: url(http://7xrci6.com1.z0.glb.clouddn.com/sprite.PNG) no-repeat;display: inline-block;}
 .clearfix:after {content: ".";display: block;clear: both;height: 0;overflow: hidden;visibility: hidden;}
 html, body, header#m-head {width: 100%;}
 
