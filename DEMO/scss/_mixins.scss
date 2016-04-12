@@ -1,0 +1,19 @@
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+ 	   -moz-border-radius: $radius;
+ 	    -ms-border-radius: $radius;
+ 	     -o-border-radius: $radius;
+ 	        border-radius: $radius;
+}
+
+@mixin transition($property) {
+	-webkit-transition: $property;
+	   -moz-transition: $property;
+	    -ms-transition: $property;
+	     -o-transition: $property;
+	        transition: $property;
+}
+
+@mixin opacity($opacity) {
+     opacity: $opacity / 100;
+}
