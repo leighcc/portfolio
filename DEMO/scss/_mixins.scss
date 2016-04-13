@@ -17,3 +17,53 @@
 @mixin opacity($opacity) {
      opacity: $opacity / 100;
 }
+
+@mixin transform($property) { 
+	-webkit-transform: $property;
+       -moz-transform: $property;
+        -ms-transform: $property;
+         -o-transform: $property;
+            transform: $property;
+}
+
+@mixin box-shadow($x, $y, $spread, $color) {
+	-webkit-box-shadow: $x $y $spread $color;
+ 	   -moz-box-shadow: $x $y $spread $color;
+ 	    -ms-box-shadow: $x $y $spread $color;
+ 	     -o-box-shadow: $x $y $spread $color;
+ 	        box-shadow: $x $y $spread $color;
+}
+
+@mixin transition-delay($property) {
+	-webkit-transition-delay: $property;
+	   -moz-transition-delay: $property;
+	    -ms-transition-delay: $property;
+	     -o-transition-delay: $property;
+	        transition-delay: $property;
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+       @-moz-keyframes #{$animation-name} {
+           @content;
+       }  
+        @-ms-keyframes #{$animation-name} {
+            @content;
+        }
+         @-o-keyframes #{$animation-name} {
+             @content;
+         }  
+            @keyframes #{$animation-name} {
+                @content;
+            }
+}
+
+@mixin animation($str) {
+	-webkit-animation: $str;
+	   -moz-animation: $str;
+	    -ms-animation: $str;
+	     -o-animation: $str;
+	        animation: $str;      
+}
