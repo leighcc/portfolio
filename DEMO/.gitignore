@@ -1,4 +1,4 @@
 images/
 js/jquery-1.12.3.min.js
 .sass-cache/
-style/style.css.map
+style/*.map

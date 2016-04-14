@@ -1,0 +1,120 @@
+.container {
+  margin-top: 200px;
+  text-align: center; }
+  .container .btn {
+    display: inline-block;
+    position: relative;
+    width: 100px;
+    overflow: hidden;
+    color: #fff;
+    font: 16px/25px "calibri";
+    text-align: center;
+    text-decoration: none; }
+    .container .btn .ripple {
+      display: block;
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: #fff;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      border-radius: 50%;
+      -webkit-animation: ripple 1.4s;
+      -moz-animation: ripple 1.4s;
+      -ms-animation: ripple 1.4s;
+      -o-animation: ripple 1.4s;
+      animation: ripple 1.4s;
+      -webkit-transform: scale(100);
+      -moz-transform: scale(100);
+      -ms-transform: scale(100);
+      -o-transform: scale(100);
+      transform: scale(100);
+      opacity: 0; }
+  .container .btn-blue {
+    background: skyblue; }
+  .container .btn-red {
+    background: crimson; }
+  .container .btn-green {
+    background: darkseagreen; }
+  .container .btn-pink {
+    background: pink; }
+
+@-webkit-keyframes ripple {
+  from {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    opacity: 0.5; }
+  to {
+    -webkit-transform: scale(100);
+    -moz-transform: scale(100);
+    -ms-transform: scale(100);
+    -o-transform: scale(100);
+    transform: scale(100);
+    opacity: 0; } }
+@-moz-keyframes ripple {
+  from {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    opacity: 0.5; }
+  to {
+    -webkit-transform: scale(100);
+    -moz-transform: scale(100);
+    -ms-transform: scale(100);
+    -o-transform: scale(100);
+    transform: scale(100);
+    opacity: 0; } }
+@-ms-keyframes ripple {
+  from {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    opacity: 0.5; }
+  to {
+    -webkit-transform: scale(100);
+    -moz-transform: scale(100);
+    -ms-transform: scale(100);
+    -o-transform: scale(100);
+    transform: scale(100);
+    opacity: 0; } }
+@-o-keyframes ripple {
+  from {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    opacity: 0.5; }
+  to {
+    -webkit-transform: scale(100);
+    -moz-transform: scale(100);
+    -ms-transform: scale(100);
+    -o-transform: scale(100);
+    transform: scale(100);
+    opacity: 0; } }
+@keyframes ripple {
+  from {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    opacity: 0.5; }
+  to {
+    -webkit-transform: scale(100);
+    -moz-transform: scale(100);
+    -ms-transform: scale(100);
+    -o-transform: scale(100);
+    transform: scale(100);
+    opacity: 0; } }
+
+/*# sourceMappingURL=ripple.css.map */

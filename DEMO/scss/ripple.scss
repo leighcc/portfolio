@@ -1,0 +1,55 @@
+@import "mixins";
+
+.container {
+	margin-top: 200px;
+	text-align: center;
+
+	.btn {
+		display: inline-block;
+		position: relative;	
+		width: 100px;
+		overflow: hidden;
+		color: #fff;
+		font: 16px/25px "calibri";
+		text-align: center;
+		text-decoration: none;
+
+		.ripple {
+			display: block;
+			position: absolute;
+			width: 4px;
+			height: 4px;
+			background: #fff;
+			@include border-radius(50%);
+
+			@include animation(ripple 1.4s);
+
+			@include transform(scale(100));
+			opacity: 0;
+		}
+	}
+
+	.btn-blue {
+		background: skyblue;
+	}
+	.btn-red {
+		background: crimson;
+	}
+	.btn-green {
+		background: darkseagreen;
+	}
+	.btn-pink {
+		background: pink;
+	}
+}
+
+@include keyframes(ripple) {
+	from {
+		@include transform(scale(0));
+		opacity: 0.5;
+	}
+	to {
+		@include transform(scale(100));
+		opacity: 0;
+	}
+}
