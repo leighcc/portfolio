@@ -1,0 +1,26 @@
+/*------------------------------------*\
+    #颜色设置
+\*------------------------------------*/
+
+/* 
+ * Theme colors
+ */
+
+ $highlight_color: #e74f4d;
+
+ /*------------------------------------*\
+    #文字设置
+\*------------------------------------*/
+
+/* 
+ * Font, line-height, and color for body text, headings, and more.
+ */
+
+ $font-family-base: "Microsoft Yahei", sans-serif;
+ $second-font-family: "SimHei", sans-serif;
+ $third-font-family: "SimSun", serif;
+ $font-size-base: 14px;
+ $font-size-large: ceil(($font-size-base * 1.5)); //21px
+ $font-size-small: 12px;
+
+ $font-size-h1: $font-size-large;
