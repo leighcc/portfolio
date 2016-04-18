@@ -17,9 +17,10 @@
 html, body {
   width: 100%; }
 
-body, h1, h2, ul, p {
+body, h1, h2, h3, ul, p {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-weight: normal; }
 
 a {
   text-decoration: none;
@@ -93,7 +94,7 @@ header {
     header .header-menu li.header-login {
       color: #e74f4d; }
 
- /*------------------------------------*\
+/*------------------------------------*\
     #COMPONENTS-BANNER
 \*------------------------------------*/
 /*
@@ -104,11 +105,15 @@ header {
 .banner {
   position: relative;
   width: 100%;
+  min-width: 1170px;
   max-height: 690px;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  margin-bottom: -3px; }
   .banner img {
     width: 100%;
-    min-width: 768px; }
+    min-width: 1170px;
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%); }
   .banner .banner-text {
     position: absolute;
     left: 117px;
@@ -131,5 +136,165 @@ header {
       text-align: center;
       background: #e74f4d;
       cursor: pointer; }
+
+/*------------------------------------*\
+    #COMPONENTS-PRODUCTS INTRODUCTION
+\*------------------------------------*/
+/*
+ * Products introduction
+ *
+ * icons锛宨con-text
+ */
+.intro {
+  display: table;
+  width: 100%;
+  min-width: 1170px;
+  height: 250px;
+  line-height: 18px;
+  text-align: center;
+  color: #767777;
+  font-family: "SimHei", sans-serif;
+  font-size: 14px; }
+  .intro .intro-img {
+    width: 42px;
+    height: 42px; }
+  .intro .intro-text {
+    width: 154px;
+    height: 52px;
+    margin: 44px auto 0; }
+  .intro .intro-item {
+    display: table-cell;
+    position: relative;
+    width: 25%;
+    padding: 45px 0 65px; }
+    .intro .intro-item:nth-of-type(1) .intro-img {
+      background-position: -36px 0; }
+    .intro .intro-item:nth-of-type(2) .intro-img {
+      background-position: -81px 0; }
+    .intro .intro-item:nth-of-type(3) .intro-img {
+      background-position: -126px 0; }
+    .intro .intro-item:nth-of-type(4) .intro-img {
+      background-position: -171px 0; }
+    .intro .intro-item:after {
+      content: "";
+      position: absolute;
+      top: 135px;
+      left: 2px;
+      display: block;
+      width: 2px;
+      height: 52px;
+      background-color: #aaa; }
+    .intro .intro-item:nth-of-type(1):after {
+      display: none; }
+
+/*------------------------------------*\
+    #COMPONENTS-ABOUT
+\*------------------------------------*/
+/*
+ * About
+ *
+ * about new world
+ */
+.about {
+  width: 100%;
+  min-width: 1170px;
+  height: 360px;
+  background-color: #ededed;
+  text-align: center; }
+  .about .about-logo {
+    width: 91px;
+    height: 91px;
+    background-position: 0 -42px;
+    margin: 89px 0 51px; }
+  .about p {
+    color: #a1a1a1;
+    white-space: nowrap;
+    font-family: "SimHei", sans-serif;
+    font-size: 53.59px; }
+
+/*------------------------------------*\
+    #COMPONENTS-CITY
+\*------------------------------------*/
+/*
+ * City
+ *
+ * select city
+ */
+.city {
+  position: relative;
+  min-width: 1170px; }
+  .city .city-cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(170, 52, 50, 0.2); }
+  .city img {
+    width: 100%;
+    min-width: 768px; }
+  .city .city-content {
+    position: absolute;
+    left: 50%;
+    top: 54px;
+    transform: translateX(-50%); }
+    .city .city-content h3 {
+      color: #fff;
+      text-align: center;
+      line-height: 1em;
+      font-family: "Microsoft Yahei", sans-serif;
+      font-size: 21px; }
+      .city .city-content h3:after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 3px;
+        margin: 11px auto 20px;
+        background-color: #fff; }
+    .city .city-content p {
+      color: #fff;
+      text-align: center;
+      line-height: 1em;
+      font-size: 12px; }
+    .city .city-content .city-menu {
+      width: 1030px;
+      font-size: 0;
+      margin: 52px auto 0; }
+      .city .city-content .city-menu .city-item {
+        width: 233px;
+        height: 34px;
+        padding-left: 10px;
+        margin-right: 30px;
+        border: 0;
+        color: #a8aaaa;
+        background: url(../img/arrow.png) 207px #fff no-repeat;
+        line-height: 1em;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        font-family: "Microsoft Yahei", sans-serif;
+        font-size: 12px; }
+        .city .city-content .city-menu .city-item:focus {
+          outline: 2px solid #be4e48; }
+        .city .city-content .city-menu .city-item option {
+          font-size: 12px;
+          line-height: 26px;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none; }
+          .city .city-content .city-menu .city-item option:hover {
+            background: #be4e48; }
+      .city .city-content .city-menu .city-search {
+        display: inline-block;
+        width: 235px;
+        height: 35px;
+        color: #fff;
+        background: #be4e48;
+        letter-spacing: 25px;
+        text-align: center;
+        cursor: pointer;
+        line-height: 35px;
+        font-family: "Microsoft Yahei", sans-serif;
+        font-size: 14px; }
 
 /*# sourceMappingURL=official_website.css.map */

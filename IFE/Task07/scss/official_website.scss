@@ -10,9 +10,10 @@ html, body {
 	width: 100%;
 }
 
-body, h1, h2, ul, p {
+body, h1, h2, h3, ul, p {
 	margin: 0;
 	padding: 0;
+	font-weight: normal;
 }
 
 a {
@@ -124,7 +125,7 @@ body {
  	}
  }
 
- /*------------------------------------*\
+/*------------------------------------*\
     #COMPONENTS-BANNER
 \*------------------------------------*/
 
@@ -137,12 +138,16 @@ body {
 .banner {
 	position: relative;
 	width: 100%;
+	min-width: $L;
 	max-height: 690px;
 	overflow-y: hidden;
+	margin-bottom: -3px;
 	
 	img {
 		width: 100%;
-		min-width: $M;
+		min-width: $L;
+		-webkit-filter: brightness(80%);
+		filter: brightness(80%);
 	}
 
 	.banner-text {
@@ -175,3 +180,240 @@ body {
 		}
 	}
 }
+
+/*------------------------------------*\
+    #COMPONENTS-PRODUCTS INTRODUCTION
+\*------------------------------------*/
+
+/*
+ * Products introduction
+ *
+ * icons，icon-text
+ */
+
+.intro {
+	display: table;
+	width: 100%;
+	min-width: $L;
+	height: 250px;
+	line-height: 18px;
+	text-align: center;
+	color: #767777;
+	font: {
+		family: $second-font-family;
+		size: $font-size-base;
+	}
+
+	.intro-img {
+		width: 42px;
+		height: 42px;
+	}
+
+	.intro-text {
+		width: 154px;
+		height: 52px;
+		margin: 44px auto 0;
+
+		
+	}
+
+	.intro-item {
+		display: table-cell;
+		position: relative;
+		width: 25%;
+		padding: 45px 0 65px;
+
+		&:nth-of-type(1) {
+			.intro-img{
+				background-position: -36px 0;
+			}
+		}
+		&:nth-of-type(2) {
+			.intro-img{
+				background-position: -81px 0;
+			}
+		}
+		&:nth-of-type(3) {
+			.intro-img{
+				background-position: -126px 0;
+			}
+		}
+		&:nth-of-type(4) {
+			.intro-img{
+				background-position: -171px 0;
+			}
+		}
+
+		&:after {
+			content:"";
+			position: absolute;
+			top: 135px;
+			left: 2px;
+			display: block;
+			width: 2px;
+			height: 52px;
+			background-color: #aaa;
+		}
+
+		&:nth-of-type(1) {
+			&:after {
+				display: none;
+			}
+		}
+	}
+}
+
+/*------------------------------------*\
+    #COMPONENTS-ABOUT
+\*------------------------------------*/
+
+/*
+ * About
+ *
+ * about new world
+ */
+
+ .about {
+ 	width: 100%;
+ 	min-width: $L;
+ 	height: 360px;
+ 	background-color: #ededed;
+ 	text-align: center;
+
+	.about-logo {
+		width: 91px;
+		height: 91px;
+		background-position: 0 -42px;
+		margin: 89px 0 51px;
+	}
+
+ 	p {
+ 		color: #a1a1a1;
+ 		white-space: nowrap;
+ 		font: {
+ 			family: $second-font-family;
+ 			size: 53.59px;
+ 		}
+ 	}
+ }
+
+/*------------------------------------*\
+    #COMPONENTS-CITY
+\*------------------------------------*/
+
+/*
+ * City
+ *
+ * select city
+ */
+
+ .city {
+	position: relative;
+	min-width: $L;
+
+	.city-cover {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+		background-color: rgba(#aa3432, 0.2);
+	}
+
+ 	img {
+ 		width: 100%;
+ 		min-width: $M;
+ 	}
+
+	.city-content {
+		position: absolute;
+		left: 50%;
+		top: 54px;
+		transform: translateX(-50%);
+
+		h3 {
+			color: #fff;
+			text-align: center;
+			line-height: 1em;
+
+			font: {
+				family: $font-family-base;
+				size: $font-size-large;
+			}
+
+			&:after {
+				content: '';
+				display: block;
+				width: 30px;
+				height: 3px;
+				margin: 11px auto 20px;
+				background-color: #fff;
+			}
+		}
+
+		p {
+			color: #fff;
+			text-align: center;
+			line-height: 1em;
+			font-size: $font-size-small;
+		}
+
+		.city-menu {
+			width: 1030px;
+			font-size: 0;
+			margin: 52px auto 0;
+
+			.city-item {
+				width: 233px;
+				height: 34px;
+				padding-left: 10px;
+				margin-right: 30px;
+				border: 0;
+				color: #a8aaaa;
+				background: url(../img/arrow.png) 207px #fff no-repeat;
+				line-height: 1em;
+
+				@include appearance(none);
+
+				font: {
+					family: $font-family-base;
+					size: $font-size-small;
+				}
+
+				&:focus {
+					outline: 2px solid $form_color;
+				}
+
+				option {
+					font-size: $font-size-small;
+					line-height: 26px;
+					@include appearance(none);
+
+					&:hover {
+						background: $form_color;
+					}
+				}
+			}
+
+			.city-search {
+				display: inline-block;
+				width: 235px;
+				height: 35px;
+				color: #fff;
+				background: $form_color;
+				letter-spacing: 25px;
+				text-align: center;
+				cursor: pointer;
+				line-height: 35px;
+
+				font: {
+					family: $font-family-base;
+					size: $font-size-base;
+				}
+			}
+		}
+	}
+
+ 	
+ 	
+ }
