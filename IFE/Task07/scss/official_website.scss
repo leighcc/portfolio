@@ -412,8 +412,71 @@ body {
 				}
 			}
 		}
-	}
+	} 	
+ }
 
- 	
- 	
+/*------------------------------------*\
+    #COMPONENTS-ACTIVITY
+\*------------------------------------*/
+
+/*
+ * Activity
+ *
+ * img, img text
+ */
+
+ .activity {
+ 	width: 100%;
+ 	height: 604px;
+ 	font-size: 0;
+ 	background: #f7f7f7;
+ 	white-space: nowrap;
+
+ 	.activity-container {
+ 		width: 80%;
+ 		margin: 0 auto;
+ 		text-align: justify;
+
+ 		&:after {
+ 			content: '';
+ 			display: inline-block;
+ 			width: 100%;
+ 		}
+ 	}
+
+ 	.activity-item {
+ 		display: inline-block;
+ 		width: 217px;
+ 		height: 388px;
+ 		margin-top: 93px;
+ 		
+ 		
+
+ 		img {
+ 			margin-top: 7px;
+ 		}
+
+ 		h3 {
+ 			margin: 12px 0;
+			line-height: 1em;
+			text-align: center;
+			color: #636464;
+
+ 			font: {
+ 				family: $second-font-family;
+ 				size: $font-size-base;
+ 			}
+ 		}
+
+ 		p {
+			text-align: center;
+			line-height: 1em;
+			color: #bcbdbd;
+
+ 			font: {
+ 				family: $second-font-family;
+ 				size: 11px;
+ 			}
+ 		}
+ 	}
  }
