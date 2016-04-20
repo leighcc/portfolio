@@ -428,12 +428,11 @@ body {
  .activity {
  	width: 100%;
  	height: 604px;
- 	font-size: 0;
  	background: #f7f7f7;
- 	white-space: nowrap;
 
  	.activity-container {
  		width: 80%;
+ 		min-width: $L;
  		margin: 0 auto;
  		text-align: justify;
 
@@ -442,41 +441,39 @@ body {
  			display: inline-block;
  			width: 100%;
  		}
- 	}
 
- 	.activity-item {
- 		display: inline-block;
- 		width: 217px;
- 		height: 388px;
- 		margin-top: 93px;
- 		
- 		
+	 	.activity-item {
+	 		display: inline-block;
+	 		width: 217px;
+	 		height: 388px;
+	 		margin-top: 93px;
 
- 		img {
- 			margin-top: 7px;
- 		}
+	 		img {
+	 			margin-top: 7px;
+	 		}
 
- 		h3 {
- 			margin: 12px 0;
-			line-height: 1em;
-			text-align: center;
-			color: #636464;
+	 		h3 {
+	 			margin: 12px 0;
+				line-height: 1em;
+				text-align: center;
+				color: #636464;
 
- 			font: {
- 				family: $second-font-family;
- 				size: $font-size-base;
- 			}
- 		}
+	 			font: {
+	 				family: $second-font-family;
+	 				size: $font-size-base;
+	 			}
+	 		}
 
- 		p {
-			text-align: center;
-			line-height: 1em;
-			color: #bcbdbd;
+	 		p {
+				text-align: center;
+				line-height: 1em;
+				color: #bcbdbd;
 
- 			font: {
- 				family: $second-font-family;
- 				size: 11px;
- 			}
- 		}
+	 			font: {
+	 				family: $second-font-family;
+	 				size: 11px;
+	 			}
+	 		}
+	 	}
  	}
  }

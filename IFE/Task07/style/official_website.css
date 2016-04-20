@@ -308,36 +308,35 @@ header {
 .activity {
   width: 100%;
   height: 604px;
-  font-size: 0;
-  background: #f7f7f7;
-  white-space: nowrap; }
+  background: #f7f7f7; }
   .activity .activity-container {
     width: 80%;
+    min-width: 1170px;
     margin: 0 auto;
     text-align: justify; }
     .activity .activity-container:after {
       content: '';
       display: inline-block;
       width: 100%; }
-  .activity .activity-item {
-    display: inline-block;
-    width: 217px;
-    height: 388px;
-    margin-top: 93px; }
-    .activity .activity-item img {
-      margin-top: 7px; }
-    .activity .activity-item h3 {
-      margin: 12px 0;
-      line-height: 1em;
-      text-align: center;
-      color: #636464;
-      font-family: "SimHei", sans-serif;
-      font-size: 14px; }
-    .activity .activity-item p {
-      text-align: center;
-      line-height: 1em;
-      color: #bcbdbd;
-      font-family: "SimHei", sans-serif;
-      font-size: 11px; }
+    .activity .activity-container .activity-item {
+      display: inline-block;
+      width: 217px;
+      height: 388px;
+      margin-top: 93px; }
+      .activity .activity-container .activity-item img {
+        margin-top: 7px; }
+      .activity .activity-container .activity-item h3 {
+        margin: 12px 0;
+        line-height: 1em;
+        text-align: center;
+        color: #636464;
+        font-family: "SimHei", sans-serif;
+        font-size: 14px; }
+      .activity .activity-container .activity-item p {
+        text-align: center;
+        line-height: 1em;
+        color: #bcbdbd;
+        font-family: "SimHei", sans-serif;
+        font-size: 11px; }
 
 /*# sourceMappingURL=official_website.css.map */
