@@ -339,4 +339,97 @@ header {
         font-family: "SimHei", sans-serif;
         font-size: 11px; }
 
+/*------------------------------------*\
+    #COMPONENTS-TIME
+\*------------------------------------*/
+/*
+ * Time
+ *
+ * table
+ */
+.time {
+  width: 100%;
+  table-layout: fixed; }
+  .time .time-row1 {
+    height: 566px; }
+    .time .time-row1 .time-bigimg {
+      color: #fff;
+      text-align: center;
+      font-family: "Microsoft Yahei", sans-serif;
+      background: url(../img/time.jpg) no-repeat;
+      background-size: cover; }
+      .time .time-row1 .time-bigimg h3 {
+        font-size: 49.47px;
+        line-height: 1em; }
+      .time .time-row1 .time-bigimg h2 {
+        font-size: 157.79px;
+        line-height: 1em; }
+      .time .time-row1 .time-bigimg p {
+        font-size: 21.91px;
+        line-height: 43.15px; }
+    .time .time-row1 td:nth-of-type(2) {
+      text-align: center; }
+      .time .time-row1 td:nth-of-type(2) h3 {
+        color: #323333;
+        line-height: 1em;
+        font-family: "SimHei", sans-serif;
+        font-size: 18px; }
+        .time .time-row1 td:nth-of-type(2) h3 span {
+          color: #e8504e;
+          letter-spacing: 2px; }
+      .time .time-row1 td:nth-of-type(2) p {
+        width: 287px;
+        margin: 32px auto 50px;
+        color: #aaa;
+        line-height: 30px;
+        text-align: left;
+        font-family: "SimSun", serif;
+        font-size: 12px; }
+      .time .time-row1 td:nth-of-type(2) div {
+        width: 103px;
+        margin: 0 auto 25px;
+        color: #e25c60;
+        border: 1px solid;
+        font-size: 12px;
+        line-height: 31px;
+        text-align: center;
+        cursor: pointer; }
+      .time .time-row1 td:nth-of-type(2) span.ball {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-left: 14px;
+        border: 1px solid #919292;
+        border-radius: 50%;
+        box-sizing: border-box; }
+        .time .time-row1 td:nth-of-type(2) span.ball.cur {
+          margin-left: 0;
+          background: #919292; }
+  .time .time-row2 {
+    height: 521px;
+    text-align: center; }
+    .time .time-row2 p, .time .time-row2 div {
+      line-height: 30.36px;
+      font-family: "SimHei", sans-serif;
+      font-size: 21px; }
+    .time .time-row2 div {
+      width: 167px;
+      margin: 0 auto;
+      line-height: 41px;
+      border: 1px solid;
+      cursor: pointer; }
+      .time .time-row2 div:before {
+        content: '';
+        display: block;
+        height: 2px;
+        width: 30px;
+        background: #fff; }
+    .time .time-row2 td:nth-of-type(1) {
+      color: #fff;
+      background: #e74f4d; }
+    .time .time-row2 .time-smaimg {
+      background: url(../img/time2.jpg) no-repeat;
+      -webkit-filter: brightness(60%);
+      filter: brightness(60%); }
+
 /*# sourceMappingURL=official_website.css.map */

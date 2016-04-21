@@ -477,3 +477,144 @@ body {
 	 	}
  	}
  }
+
+/*------------------------------------*\
+    #COMPONENTS-TIME
+\*------------------------------------*/
+
+/*
+ * Time
+ *
+ * table
+ */
+
+ .time {
+ 	width: 100%;
+ 	table-layout: fixed;
+
+ 	.time-row1 {
+ 		height: 566px;
+
+ 		.time-bigimg {
+ 			color: #fff;
+ 			text-align: center;
+ 			font-family: $font-family-base;
+ 			background: url(../img/time.jpg) no-repeat;
+ 			background-size: cover;
+
+ 			h3 {
+ 				font-size: 49.47px;
+ 				line-height: 1em;
+ 			}
+
+ 			h2 {
+ 				font-size: 157.79px;
+ 				line-height: 1em;
+ 			}
+
+ 			p {
+ 				font-size: 21.91px;
+ 				line-height: 43.15px;
+ 			}
+ 		}
+
+ 		td:nth-of-type(2) {
+			text-align: center;
+
+ 			h3 {
+ 				color: #323333;
+ 				line-height: 1em;
+
+ 				font: {
+ 					family: $second-font-family;
+ 					size: 18px;
+ 				}
+
+ 				span {
+ 					color: #e8504e;
+ 					letter-spacing: 2px;
+ 				}
+ 			}
+
+ 			p {
+ 				width: 287px;
+ 				margin: 32px auto 50px;
+				color: #aaa;
+				line-height: 30px;
+				text-align: left;
+ 				
+ 				font: {
+ 					family: $third-font-family;
+ 					size: 12px;
+ 				}
+ 			}
+
+ 			div {
+ 				width: 103px;
+ 				margin: 0 auto 25px;
+ 				color: #e25c60;
+ 				border: 1px solid;
+ 				font-size: 12px;
+ 				line-height: 31px;
+ 				text-align: center;
+ 				cursor: pointer;
+ 			}
+
+ 			span.ball {
+ 				display: inline-block;
+ 				width: 12px;
+ 				height: 12px;
+ 				margin-left: 14px;
+ 				border: 1px solid #919292;
+ 				border-radius: 50%;
+ 				box-sizing: border-box;
+
+ 				&.cur {
+ 					margin-left: 0;
+ 					background: #919292;
+ 				}
+ 			}
+ 		}
+ 	}
+
+ 	.time-row2 {
+ 		height: 521px;
+ 		text-align: center;
+
+ 		p, div {
+			line-height: 30.36px;
+
+ 			font: {
+ 				family: $second-font-family;
+ 				size: 21px;
+ 			}
+ 		}
+
+ 		div {
+ 			width: 167px;
+ 			margin: 0 auto;
+ 			line-height: 41px;
+ 			border: 1px solid;
+ 			cursor: pointer;
+
+ 			&:before {
+ 				content: '';
+ 				display: block;
+ 				height: 2px;
+ 				width: 30px;
+ 				background: #fff;
+ 			}
+ 		}
+
+ 		td:nth-of-type(1) {
+ 			color: #fff;
+ 			background: $highlight_color;
+ 		}
+
+ 		.time-smaimg {
+ 			background: url(../img/time2.jpg) no-repeat;
+ 			-webkit-filter: brightness(60%);
+ 			filter: brightness(60%);
+ 		}
+ 	}
+ }
