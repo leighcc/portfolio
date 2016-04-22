@@ -291,6 +291,7 @@ header {
         color: #fff;
         background: #be4e48;
         letter-spacing: 25px;
+        text-indent: 25px;
         text-align: center;
         cursor: pointer;
         line-height: 35px;
@@ -349,10 +350,12 @@ header {
  */
 .time {
   width: 100%;
-  table-layout: fixed; }
+  table-layout: fixed;
+  border-collapse: collapse; }
   .time .time-row1 {
     height: 566px; }
     .time .time-row1 .time-bigimg {
+      position: relative;
       color: #fff;
       text-align: center;
       font-family: "Microsoft Yahei", sans-serif;
@@ -367,6 +370,17 @@ header {
       .time .time-row1 .time-bigimg p {
         font-size: 21.91px;
         line-height: 43.15px; }
+      .time .time-row1 .time-bigimg:after {
+        position: absolute;
+        border-color: transparent #fff transparent transparent;
+        border-width: 15px 26px 15px 0;
+        border-style: solid;
+        height: 0;
+        width: 0;
+        content: '';
+        right: 0;
+        top: 50%;
+        z-index: 2; }
     .time .time-row1 td:nth-of-type(2) {
       text-align: center; }
       .time .time-row1 td:nth-of-type(2) h3 {
@@ -407,29 +421,218 @@ header {
           background: #919292; }
   .time .time-row2 {
     height: 521px;
-    text-align: center; }
+    text-align: center;
+    color: #323333; }
     .time .time-row2 p, .time .time-row2 div {
       line-height: 30.36px;
       font-family: "SimHei", sans-serif;
       font-size: 21px; }
-    .time .time-row2 div {
+    .time .time-row2 div.line {
+      height: 2px;
+      width: 30px;
+      margin: 25px auto;
+      background: #aaa; }
+    .time .time-row2 div.btn {
       width: 167px;
       margin: 0 auto;
       line-height: 41px;
       border: 1px solid;
+      color: #e74f4d;
       cursor: pointer; }
-      .time .time-row2 div:before {
-        content: '';
-        display: block;
-        height: 2px;
-        width: 30px;
-        background: #fff; }
     .time .time-row2 td:nth-of-type(1) {
       color: #fff;
       background: #e74f4d; }
+      .time .time-row2 td:nth-of-type(1) div.line {
+        background: #fff; }
+      .time .time-row2 td:nth-of-type(1) div.btn {
+        color: #fff; }
+    .time .time-row2 td:nth-of-type(2) {
+      position: relative; }
+      .time .time-row2 td:nth-of-type(2):after {
+        position: absolute;
+        border-color: transparent transparent transparent #fff;
+        border-width: 15px 0 15px 26px;
+        border-style: solid;
+        height: 0;
+        width: 0;
+        content: '';
+        left: 100%;
+        top: 50%;
+        z-index: 2; }
     .time .time-row2 .time-smaimg {
       background: url(../img/time2.jpg) no-repeat;
+      background-size: cover;
       -webkit-filter: brightness(60%);
       filter: brightness(60%); }
+
+/*------------------------------------*\
+    #COMPONENTS-VOLUNTEER
+\*------------------------------------*/
+/*
+ * Volunteer
+ *
+ * form
+ */
+.volunteer {
+  text-align: center; }
+  .volunteer h2 {
+    margin: 118px 0 9px;
+    color: #323333;
+    line-height: 1em;
+    font-family: "SimHei", sans-serif;
+    font-size: 21px; }
+  .volunteer p {
+    color: #aaa;
+    font: 12px/18px "Microsoft Yahei", sans-serif; }
+  .volunteer div.line {
+    width: 30px;
+    height: 2px;
+    background: #e74f4d;
+    margin: 0 auto 12px; }
+  .volunteer div.volunteer-container {
+    width: 80%;
+    margin: 104px auto 167px; }
+    @media only screen and (min-width: 1170px) {
+      .volunteer div.volunteer-container {
+        width: 70%; } }
+  .volunteer div.volunteer-declare {
+    display: table-cell;
+    width: 288px;
+    text-align: left;
+    color: rgba(35, 24, 21, 0.6); }
+    .volunteer div.volunteer-declare h3 {
+      margin-top: 34.5px;
+      color: #231815;
+      font: 14px "Microsoft Yahei", sans-serif; }
+      .volunteer div.volunteer-declare h3:nth-of-type(1) {
+        margin: 0; }
+    .volunteer div.volunteer-declare p {
+      margin: 20px 0 7.5px;
+      font: 12px/21px "SimSun", serif; }
+    .volunteer div.volunteer-declare div.btn {
+      font: 12px/12px "SimSun", serif;
+      text-align: right;
+      cursor: pointer; }
+  .volunteer form.volunteer-form {
+    display: table-cell;
+    padding-left: 77px;
+    text-align: justify; }
+    .volunteer form.volunteer-form input, .volunteer form.volunteer-form textarea, .volunteer form.volunteer-form div.btn {
+      width: 309px;
+      height: 40px;
+      padding-left: 18px;
+      margin-bottom: 14px;
+      background: #ececee;
+      font: 12px "SimSun", serif;
+      border: 0; }
+      .volunteer form.volunteer-form input ::-webkit-input-placeholder, .volunteer form.volunteer-form textarea ::-webkit-input-placeholder, .volunteer form.volunteer-form div.btn ::-webkit-input-placeholder {
+        /* WebKit browsers */
+        color: #231815; }
+      .volunteer form.volunteer-form input :-moz-placeholder, .volunteer form.volunteer-form textarea :-moz-placeholder, .volunteer form.volunteer-form div.btn :-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: #231815; }
+      .volunteer form.volunteer-form input ::-moz-placeholder, .volunteer form.volunteer-form textarea ::-moz-placeholder, .volunteer form.volunteer-form div.btn ::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: #231815; }
+      .volunteer form.volunteer-form input :-ms-input-placeholder, .volunteer form.volunteer-form textarea :-ms-input-placeholder, .volunteer form.volunteer-form div.btn :-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+        color: #231815; }
+    .volunteer form.volunteer-form textarea, .volunteer form.volunteer-form div.btn {
+      width: 100%;
+      height: auto;
+      padding: 18px;
+      resize: none;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+    .volunteer form.volunteer-form div.btn {
+      margin: 0;
+      padding: 0;
+      color: #323333;
+      text-align: center;
+      font: 14px/40px "SimHei", sans-serif;
+      cursor: pointer; }
+
+/*------------------------------------*\
+    #COMPONENTS-FOOTER
+\*------------------------------------*/
+/*
+ * Footer
+ *
+ * contact
+ */
+footer {
+  position: relative;
+  width: 100%;
+  height: 415px;
+  padding-top: 92px;
+  background: #2f2f38;
+  color: #fff;
+  text-align: center; }
+  footer h2 {
+    font: 21px/21px "SimHei", sans-serif; }
+  footer p {
+    margin: 8px 0 27px;
+    font: 12px/18px "SimSun", serif; }
+  footer input {
+    width: 430px;
+    height: 40px;
+    vertical-align: top;
+    padding-left: 10px;
+    margin-bottom: 38px;
+    font-size: 14px;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  footer span.commit {
+    display: inline-block;
+    vertical-align: top;
+    height: 40px;
+    width: 80px;
+    background: #6f7178;
+    font: 15px/40px "Microsoft Yahei", sans-serif;
+    cursor: pointer;
+    letter-spacing: 9px;
+    text-indent: 9px; }
+  footer a.sprite {
+    display: inline-block; }
+    footer a.sprite:nth-of-type(1) {
+      width: 22px;
+      height: 25px;
+      margin-right: 28px;
+      background-position: -100px -50px; }
+    footer a.sprite:nth-of-type(2) {
+      width: 29px;
+      height: 24px;
+      margin-right: 27px;
+      background-position: -128px -50px; }
+    footer a.sprite:nth-of-type(3) {
+      width: 27px;
+      height: 25px;
+      margin-right: 21px;
+      background-position: -160px -50px; }
+    footer a.sprite:nth-of-type(4) {
+      width: 24px;
+      height: 25px;
+      background-position: -195px -50px; }
+  footer div.footer-banner {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 58px;
+    padding: 30px 99px 0;
+    background: #303039;
+    text-align: justify;
+    font: 12px "SimSun", serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    footer div.footer-banner:after {
+      content: '';
+      display: inline-block;
+      width: 100%; }
+    footer div.footer-banner span {
+      display: inline-block; }
 
 /*# sourceMappingURL=official_website.css.map */
