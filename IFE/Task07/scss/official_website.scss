@@ -38,7 +38,7 @@ body {
 	display: inline-block;
 }
 
-.banner, .banner img, .intro, .about, .city, .activity-container, .time {
+.banner, .banner img, .intro, .about, .city, .activity-container, .time, footer {
 	min-width: $L;
 }
 
@@ -695,7 +695,7 @@ body {
  /*
   * Volunteer
   *
-  * form
+  * volunteer-declare and form displayed as table-cell
   */
 
   .volunteer {
@@ -725,11 +725,8 @@ body {
   	}
 
   	div.volunteer-container {
-  		width: 80%;
+  		width: 1038px;
   		margin: 104px auto 167px;
-  		@include MQ(L) {
-  			width: 70%;
-  		}
   	}
 
   	div.volunteer-declare {
@@ -764,7 +761,7 @@ body {
 
   	form.volunteer-form {
   		display: table-cell;
-  		// min-width: 639px;
+  		width: 673px;
   		padding-left: 77px;
   		text-align: justify;
 
@@ -776,7 +773,7 @@ body {
   			@include placeholder(#231815);
   			
   			background: #ececee;
-  			font: 12px $third-font-family;
+  			font: $font-size-small $third-font-family;
   			border: 0;
   		}
 

@@ -38,7 +38,7 @@ body {
   background: url(../img/sprite.png) no-repeat;
   display: inline-block; }
 
-.banner, .banner img, .intro, .about, .city, .activity-container, .time {
+.banner, .banner img, .intro, .about, .city, .activity-container, .time, footer {
   min-width: 1170px; }
 
 /*------------------------------------*\
@@ -487,7 +487,7 @@ header {
 /*
  * Volunteer
  *
- * form
+ * volunteer-declare and form displayed as table-cell
  */
 .volunteer {
   text-align: center; }
@@ -506,11 +506,8 @@ header {
     background: #e74f4d;
     margin: 0 auto 12px; }
   .volunteer div.volunteer-container {
-    width: 80%;
+    width: 1038px;
     margin: 104px auto 167px; }
-    @media only screen and (min-width: 1170px) {
-      .volunteer div.volunteer-container {
-        width: 70%; } }
   .volunteer div.volunteer-declare {
     display: table-cell;
     width: 288px;
@@ -531,6 +528,7 @@ header {
       cursor: pointer; }
   .volunteer form.volunteer-form {
     display: table-cell;
+    width: 673px;
     padding-left: 77px;
     text-align: justify; }
     .volunteer form.volunteer-form input, .volunteer form.volunteer-form textarea, .volunteer form.volunteer-form div.btn {
