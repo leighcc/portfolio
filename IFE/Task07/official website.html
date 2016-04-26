@@ -68,23 +68,37 @@
 		<div class="city-content">
 			<h3>查找新世界城市活动信息</h3>
 			<p>每个城市的有不同的活动信息，请自主查询您所需要了解的城市</p>
+
 			<div class="city-menu">
-				<select class="city-item">
-					<option value="" selected>中国</option>
-				</select>
-				<select class="city-item">
-					<option value="" disabled selected>省份</option>
-					<option value="">北京市</option>
-					<option value="">天津市</option>
-					<option value="">河北省</option>
-					<option value="">陕西省</option>
-					<option value="">内蒙古自治区</option>
-					<option value="">辽宁省</option>
-				</select>
-				<select class="city-item">
-					<option value="" disabled selected>城市</option>
-				</select>
+
+				<div class="city-item">
+						<input type="checkbox" name="city" id="country">
+						<label class="selectedTxt" for="country">中国</label>
+				</div>
+
+				<div class="city-item">
+						<input type="checkbox" name="city" id="province">
+						<label class="selectedTxt" for="province">省份</label>
+					<div class="selectList">
+						<ul>
+							<li>北京市</li>
+							<li>天津市</li>
+							<li>河北省</li>
+							<li>陕西省</li>
+							<li>内蒙古自治区</li>
+							<li>辽宁省</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="city-item">
+						<input type="checkbox" name="city" id="town">
+						<label class="selectedTxt" for="town">城市</label>
+
+				</div>
+				
 				<div class="city-search">搜索</div>
+
 			</div>
 		</div>
 	</div>

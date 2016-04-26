@@ -14,11 +14,11 @@
 	}
 }
 
-@mixin appearance($property) {
-	-webkit-appearance: $property;
-	   -moz-appearance: $property;
-	        appearance: $property;
-}
+// @mixin appearance($property) {
+// 	-webkit-appearance: $property;
+// 	   -moz-appearance: $property;
+// 	        appearance: $property;
+// }
 
 @mixin placeholder($color) {
 	::-webkit-input-placeholder { /* WebKit browsers */
