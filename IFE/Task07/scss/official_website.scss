@@ -34,7 +34,7 @@ body {
 }
 
 .sprite {
-	background: url(../img/sprite.png) no-repeat;
+	background: url("http://7xrci6.com1.z0.glb.clouddn.com/sprite.png") no-repeat;
 	display: inline-block;
 }
 
@@ -371,7 +371,7 @@ body {
 				height: 34px;
 				margin-right: 30px;
 				color: #a8aaaa;
-				background: url(../img/arrow.png) 207px #fff no-repeat;
+				background: url("http://7xrci6.com1.z0.glb.clouddn.com/arrow.png") 207px #fff no-repeat;
 				font-size: $font-size-small;
 
 				// show and hide the selectList
@@ -418,7 +418,7 @@ body {
 
 						&:hover {
 							color: #fff;
-							background: url(../img/select.png) 8px 8px no-repeat $form_color;
+							background: url("http://7xrci6.com1.z0.glb.clouddn.com/select.png") 8px 8px no-repeat $form_color;
 						}
 					}
 				}
@@ -526,7 +526,7 @@ body {
  			color: #fff;
  			text-align: center;
  			font-family: $font-family-base;
- 			background: url(../img/time.jpg) no-repeat;
+ 			background: url("http://7xrci6.com1.z0.glb.clouddn.com/time.jpg") no-repeat;
  			background-size: cover;
 
  			h3 {
@@ -680,7 +680,7 @@ body {
  		}
 
  		.time-smaimg {
- 			background: url(../img/time2.jpg) no-repeat;
+ 			background: url("http://7xrci6.com1.z0.glb.clouddn.com/time2.jpg") no-repeat;
  			background-size: cover;
  			-webkit-filter: brightness(60%);
  			filter: brightness(60%);

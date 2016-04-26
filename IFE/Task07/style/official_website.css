@@ -35,7 +35,7 @@ body {
   font-family: "Microsoft Yahei", sans-serif; }
 
 .sprite {
-  background: url(../img/sprite.png) no-repeat;
+  background: url("http://7xrci6.com1.z0.glb.clouddn.com/sprite.png") no-repeat;
   display: inline-block; }
 
 .banner, .banner img, .intro, .about, .city, .activity-container, .time, footer {
@@ -265,7 +265,7 @@ header {
         height: 34px;
         margin-right: 30px;
         color: #a8aaaa;
-        background: url(../img/arrow.png) 207px #fff no-repeat;
+        background: url("http://7xrci6.com1.z0.glb.clouddn.com/arrow.png") 207px #fff no-repeat;
         font-size: 12px; }
         .city .city-content .city-menu .city-item input[type="checkbox"] {
           position: absolute;
@@ -300,7 +300,7 @@ header {
             padding-left: 32px; }
             .city .city-content .city-menu .city-item .selectList li:hover {
               color: #fff;
-              background: url(../img/select.png) 8px 8px no-repeat #be4e48; }
+              background: url("http://7xrci6.com1.z0.glb.clouddn.com/select.png") 8px 8px no-repeat #be4e48; }
       .city .city-content .city-menu .city-search {
         display: inline-block;
         width: 235px;
@@ -375,7 +375,7 @@ header {
       color: #fff;
       text-align: center;
       font-family: "Microsoft Yahei", sans-serif;
-      background: url(../img/time.jpg) no-repeat;
+      background: url("http://7xrci6.com1.z0.glb.clouddn.com/time.jpg") no-repeat;
       background-size: cover; }
       .time .time-row1 .time-bigimg h3 {
         font-size: 49.47px;
@@ -476,7 +476,7 @@ header {
         top: 50%;
         z-index: 2; }
     .time .time-row2 .time-smaimg {
-      background: url(../img/time2.jpg) no-repeat;
+      background: url("http://7xrci6.com1.z0.glb.clouddn.com/time2.jpg") no-repeat;
       background-size: cover;
       -webkit-filter: brightness(60%);
       filter: brightness(60%); }
