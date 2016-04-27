@@ -573,7 +573,7 @@ function makeRequest (url, data, handler) {
 	}
 	http_request.onreadystatechange = function () {
 		if (http_request.readyState == 4) { //检查请求的状态，如果为4，意味着响应收到了
-		    if (http_request.status == 200) { //检查HTTP服务器响应的状态值
+		    if (http_request.status == 200 || http_request.status == 0) { //检查HTTP服务器响应的状态值，对于非服务器端（本地或非法链接），status为0
 		        handler(http_request.responseText); //收到服务器响应后的处理
 			}
 			else {
