@@ -107,11 +107,17 @@
 
 /* never display again */
 (function() { 
-	var tips = document.getElementById('m-message')
-	close = tips.getElementsByClassName('wrap')[0].getElementsByTagName('div')[0];
-	cookie = getCookie();
+	var tips = document.getElementById('m-message'),
+	    close = tips.getElementsByClassName('wrap')[0].getElementsByTagName('div')[0],
+        // 获取当前网页的cookie，返回一个cookie对象
+	    cookie = getCookie();
 
-		if (!cookie.noTips) {tips.style.display = 'block';};
+		if (!cookie.noTips) {
+            tips.style.display = 'block';
+        }
+        else {
+            tips.style.display = 'none';
+        }
 
 		addClickEvent(close, function (event) {
 			setCookie('noTips', 1, new Date(9999,9));
@@ -628,6 +634,7 @@ function delegateEvent(element, tag, eventName, listener) {
 
 function getCookie() {
     var cookie = {};
+    // 返回当前网页的cookie
     var all = document.cookie;
     if (all === '') return cookie;
     var list = all.split('; ');
@@ -635,6 +642,7 @@ function getCookie() {
         var item = list[i];
         var p = item.indexOf('=');
         var name = item.substring(0, p);
+        // URL解码
         name = decodeURIComponent(name);
         var value = item.substring(p + 1);
         value = decodeURIComponent(value);
