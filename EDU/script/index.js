@@ -115,9 +115,6 @@
 		if (!cookie.noTips) {
             tips.style.display = 'block';
         }
-        else {
-            tips.style.display = 'none';
-        }
 
 		addClickEvent(close, function (event) {
 			setCookie('noTips', 1, new Date(9999,9));
