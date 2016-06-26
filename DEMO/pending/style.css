@@ -1,0 +1,477 @@
+body, h2, h3, p, ul {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 100px;
+}
+
+body {
+	font: 0.12rem/0.12rem "Microsoft Yahei", "sans-serif"; 
+}
+
+/* 雪碧图 */
+.logo, .slogan, #board, #board .num1, #board .center, .bigBtn, #lottery .num2, #lottery .lotteryBox, #lottery li .pic, #lottery .lotteryBox .btn, #lottery .banner, #footer .table .left {
+	background: url(http://7xrci6.com1.z0.glb.clouddn.com/spritelct.png) no-repeat;
+	background-size: 714.5px 559px;
+	text-indent: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.clearfix:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+#wrap {
+	overflow-x: hidden;
+	background: url(http://7xrci6.com1.z0.glb.clouddn.com/pattern.png) repeat-y, url(http://7xrci6.com1.z0.glb.clouddn.com/pattern.png) repeat-y, #0b99e1;
+	background-size: 12px, 12px;
+	background-position: 0 0, right 0;
+}
+
+/*
+ * 头部
+ */
+
+#header .logo {
+	width: 87.5px;
+	height: 29px;
+	margin: 23px 0 0 3.75%;
+	background-position: -537px -334px;
+}
+
+#header .slogan {
+	width: 320px;
+	height: 123px;
+	margin: 0 auto;
+	background-position: 0 -59px;
+}
+
+/*
+ * 展示牌
+ */
+
+#board {
+	width: 320px;
+	height: 337.5px;
+	margin: -89px auto 0;
+	background-position: 0 -189px;
+	text-indent: 0;
+}
+
+/* 标题 */
+#board header {
+	margin-top: 98px;
+	color: #fff;
+}
+
+#board .num1 {
+	display: inline-block;
+	float: left;
+	width: 23px;
+	height: 47.5px;
+	margin: 0 15px 0 30px;
+	background-position: -537px -378.5px;
+	text-indent: 100%;
+}
+
+#board h2 {
+	padding-top: 17.5px;
+	font-size: 0.16rem;
+}
+
+#board h3 {
+	margin-top: 4px;
+	font-size: 0.14rem;
+	font-weight: normal;
+}
+
+/* 展示牌上的内容 */
+#board .content {	 
+	margin-top: 26.5px;
+	text-align: center;
+	color: #b2b2b2;
+}
+
+#board .content .top .color {
+	margin: 7.5px auto 23px;
+	font-size: .14rem;
+	color: #ff3838;
+}
+
+#board .content .center {
+	width: 73.5px;
+	height: 34px;
+	margin: 0 auto 16.5px;
+	background-position: -614px -378.5px;
+	text-indent: 100%;
+}
+
+#board .content .bottom {
+	display: flex;
+	justify-content: space-between;
+	width: 257px;
+	margin: 0 auto;
+}
+
+#board .bottom div {
+	display: inline-block;
+	line-height: .2rem;
+}
+
+#board .bottom .color {
+	color: #ff3838;
+}
+
+/* 轮播图的小圆点 */
+#board .control i {
+	display: inline-block;
+	width: 5px;
+	height: 5px;
+	background: #b2b2b2;
+	border-radius: 50%;
+	transform: translateX(-6px);
+}
+
+#board .control i.cur {
+	background: #ff3838;
+}
+
+.bigBtn {
+	width: 296px;
+	height: 52.5px;
+	margin: 21.5px auto 15px;
+	text-indent: 0;
+	font-size: .21rem;
+	line-height: 44px;
+	text-align: center;
+	color: #df4733;
+}
+
+/*
+ * 抽奖
+ */
+
+#lottery {
+	position: relative;
+	background: url(http://7xrci6.com1.z0.glb.clouddn.com/pattern.png);
+	background-size: 12px;
+}
+
+#lottery header {
+	width: 320px;
+	margin: 0 auto;
+	position: relative;
+	color: #fff;
+	
+}
+
+/* 标题底下的色块 */
+#lottery .mask {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: calc(0.3rem + 10px);
+	background: #0080c1;
+}
+
+#lottery .num2 {
+ 	position: absolute;
+ 	width: 33.5px;
+ 	height: 48.5px;
+ 	background-position: -572.5px -378.5px;
+ 	left: 22px;
+ 	top: -12px;
+}
+
+#lottery h2 {
+ 	font-size: .16rem;
+ 	margin-left: 66px;
+ 	padding-top: 7px;
+}
+
+#lottery h3 {
+ 	font-size: .14rem;
+ 	margin-left: 66px;
+ 	padding: 3px 0 7.5px 0;
+}
+
+#lottery .lotteryBox {
+	position: relative;
+	width: 285px;
+	height: 286px;
+	margin: 11.5px auto 0;
+	background-position: -363.5px 0;
+}
+
+#lottery .lotteryBox ul {
+	display: flex;
+	justify-content: space-between;
+	width: 247px;
+	margin: 0 auto;
+	padding-top: 19px;
+}
+
+#lottery .lotteryBox ul + ul {
+	padding: 0;
+	margin-top: 9px;
+}
+
+/* 放奖品的小盒子按顺时针排列 */
+#lottery .lotteryBox ul:nth-of-type(2n) {
+	flex-direction: row-reverse;
+}
+
+#lottery .lotteryBox li {
+	position: relative;
+	width: 54px;
+	height: 54px;
+	border-radius: 10px;
+	list-style-type: none;
+}
+
+#lottery li .pic {
+	margin: 8px auto 0;
+}
+
+#lottery li.lucky .pic {
+	width: 26px;
+	height: 37px;
+	background-position: -660.5px -499px;
+}
+
+#lottery li.iPhone .pic {
+	width: 34.5px;
+	height: 45px;
+	background-position: -536px -445px;
+	margin-top: 4.5px;
+}
+
+#lottery li.Note .pic {
+	width: 21.5px;
+	height: 43px;
+	background-position: -582.5px -445px;
+	margin-top: 6.5px;
+}
+
+#lottery li.watch .pic {
+	width: 31.5px;
+	height: 39px;
+	background-position: -617px -445px;
+	margin-top: 5px;
+}
+
+#lottery li.plane .pic {
+	width: 49px;
+	height: 24px;
+	background-position: -580px -503.5px;
+	margin-top: 15px;
+}
+
+#lottery li.gold .pic {
+	width: 42px;
+	height: 28px;
+	background-position: -660px -447.5px;
+	margin-top: 10.5px;
+}
+
+#lottery li.iPad .pic {
+	width: 34.5px;
+	height: 40px;
+	background-position: -535.5px -503.5px;
+	margin-top: 6px;
+}
+
+#lottery li p {
+	position: absolute;
+	width: 120.48%;
+	/* 缩小后调整与奖品盒子的位置 */
+	left: -6px;
+	bottom: -2px;
+	/* 手机最小字体为12px，手动调小 */
+	transform: scale(0.83, 0.83);
+	line-height: 17px;
+	text-indent: 0;
+	text-align: center;
+	color: #fff;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+#lottery .lotteryBox li:nth-of-type(2n + 1) {
+	background: #3bcfff;
+	border: 1px solid #007dbd;
+}
+
+#lottery .lotteryBox li:nth-of-type(2n) {
+	background: #25bcfb;
+	border: 1px solid #0080c1;
+}
+
+#lottery .lotteryBox li.enabled {
+	background: #ffde42;
+	border-color: dfa813;
+}
+
+#lottery li:nth-of-type(2n + 1) p {
+	background: rgba(17,152,210,.7);
+}
+
+#lottery li:nth-of-type(2n) p {
+	background: rgba(15,152,216,.7);
+}
+
+#lottery li.enabled p {
+	background: rgba(232,190,36,.7);
+}
+
+#lottery .lotteryBox .btn {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -60%);
+	width: 142px;
+	height: 167px;
+	background-position: -363.5px -332.5px;
+	font-size: .14rem;
+	line-height: .16rem;
+	text-indent: 0;
+	text-align: center;
+	color: #ffdd18;
+}
+
+#lottery .btn p {
+	margin-top: 113px;
+}
+
+#lottery .nameList {
+	width: 100%;
+	margin-top: 12.5px;
+	background: rgba(6,137,204,.5);
+}
+
+#lottery .nameList .container {
+	display: flex;
+	width: 260px;
+	margin: 0 auto;
+	justify-content: space-between;
+	font: .14rem;
+	line-height: .24rem;
+	color: #fff100;
+}
+
+#lottery .banner {
+	width: 276px;
+	height: 15px;
+	margin: 22.5px auto 18.5px;
+	background-position: -363.5px -300.5px;
+}
+
+#lottery .link {
+	display: flex;
+	justify-content: space-between;
+	width: 140px;
+	margin: 0 auto;
+	padding-bottom: 14px;
+	font-size: .14rem;
+	color: #fff100;
+	text-decoration: underline;
+}
+
+/*
+ * 页脚
+ */
+
+#footer {
+	position: relative;
+	padding: 24px 0 61px 0;
+	background: #0088cc;
+	color: #57b9ea;
+	text-align: center;
+}
+
+#footer .heading {
+	display: inline-block;
+	/* 提升层级，使其在横线上面 */
+	position: relative;
+	padding: 0 6.5px;
+	background: #0088cc;
+}
+
+#footer .heading span {
+	display: table-cell;
+}
+
+#footer .heading .left {
+	padding-right: 7.5px;
+}
+
+#footer .heading .right {
+	padding-left: 7.5px;
+}
+
+/* 标题中间的竖线 */
+#footer .heading .line {
+	content: '';
+	width: 1px;
+	height: .12rem;
+	background: #57b9ea;
+}
+
+/* 标题底下的横线 */
+.footer:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: calc(24px + .06rem);
+	width: 100%;
+	height: 1px;
+	background: #0077b3;
+}
+
+#footer .table {
+	width: 290px;
+	margin: 21px auto 0;
+}
+
+#footer .table .top, #footer .table .middle, #footer .bottom {
+	display: flex;
+	align-items: center;
+	text-align: left;
+}
+
+#footer .table .left {
+	width: 45px;
+	height: 45px;
+	margin-right: 24.5px;
+	background-position: -363.5px -503.5px;
+}
+
+#footer .middle .left {
+	background-position: -419px -503.5px;
+}
+
+#footer .bottom .left {
+	background-position: -474.5px -503.5px;
+}
+
+#footer .table .right {
+	flex: 1;
+	padding: 12px 0;
+	border-bottom: 1px solid #0077b3;
+}
+
+#footer .table h2 {
+	font-weight: normal;
+	font-size: .15rem;
+	line-height: .15rem;
+}
+
+#footer .table p {
+	margin-top: 9.5px;
+	font-size: 11px;
+}
