@@ -2,3 +2,6 @@ images/
 js/jquery-1.12.3.min.js
 .sass-cache/
 node_modules/
+package.json
+server.js
+gulpfile.js
