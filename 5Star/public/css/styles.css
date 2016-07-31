@@ -1,0 +1,228 @@
+html {
+	font-size: 100px;
+}
+
+@media (min-device-width: 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2) {
+	html {
+		font-size: 117.1875px;
+	}
+}
+
+body, h1, h2, h3, p, ul {
+	margin: 0;
+	padding: 0;
+	font: 12px Microsoft Yahei, sans-serif;
+}
+
+li {
+	display: block;
+}
+
+.page-1 .bg-star, .page-1 .top, .page-1 .item, .page-2 .header, .page-2 .item-img, .page-2 .item-hd, .page-2 .item-txt, .page-3 .bg-star, .page-3 .header-hd, .page-3 .bg-shadow {
+	background: url(../img/sprite.png);
+	background-size: 945px 708.5px;
+	background-repeat: no-repeat;
+	background-clip: content-box;
+	background-origin: content-box;
+	text-indent: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#container .page {
+	position: relative;
+	background-color: #ed5b44;
+}
+
+/*第一页*/
+
+#container .page-1 {
+	background-image: radial-gradient(ellipse closest-side at 50% 25%, hsla(0,0%,100%,.3) 0%, transparent 100%);
+}
+
+.page-1 .item-2, .page-1 .bg-star, .page-1 .top {
+	position: absolute;
+	left: 50%;transform: translateX(-50%);
+}
+
+.page-1 .bg-star {
+	width: 295.5px;height: 312.5px;
+	top: .275rem;
+}
+
+.page-1 .top {
+	width: 283.5px;height: 217px;
+	top: 1rem;
+	background-position: 0 -342px;
+}
+
+.page-1 .bottom {
+	position: absolute;
+	width: 100%;height: .905rem;
+	bottom: 0;
+	background: url(../img/cloud.png) no-repeat 0 0 / 100%;
+}
+
+.page-1 .item-1 {
+	position: absolute;
+	width: 75px;height: 88px;
+	left: .295rem;bottom: 1.525rem;
+	background-position: -316px -159px;
+}
+
+.page-1 .item-2 {
+	width: 132.5px;height: 141.5px;
+	bottom: .625rem;
+	background-position: -316px 0;
+}
+
+.page-1 .item-3 {
+	position: absolute;
+	width: 102px;height: 98px;
+	right: .08rem;bottom: 1.495rem;
+	background-position: -401px -159px;
+}
+
+/*第二页*/
+
+#container .page-2 {
+	background-color: #ff8c3e;
+	/*盖住第三页的斜线*/
+	z-index: 1;
+}
+
+.page-2 .header {
+	width: 281px;height: 81.5px;
+	padding-top: .865rem;
+	margin: 0 auto;
+	background-position: 0 -580px;
+}
+
+/* 背景光影 */
+.page-2 .item {
+	background-image: radial-gradient(circle closest-side, hsla(0,0%,100%,.3), transparent);
+}
+
+.page-2 .item-1 {
+	margin-top: -22.5px;
+}
+
+.page-2 .item-img, .page-2 .item-hd, .page-2 .item-txt {
+	margin: 0 auto;
+}
+
+.page-2 .item-hd {
+	margin-top: .07rem;
+}
+
+.page-2 .item-txt {
+	margin-top: .01rem;
+	margin-bottom: .07rem;
+}
+
+.page-2 .item-img-1 {
+	width: 72px;height: 68px;
+	background-position: -317.5px -272.5px;
+}
+
+.page-2 .item-img-2 {
+	width: 102.5px;height: 86.5px;
+	background-position: -407.5px -272.5px;
+}
+
+.page-2 .item-img-3 {
+	width: 75.5px;height: 80.5px;
+	background-position: -317.5px -372px;
+}
+
+.page-2 .item-hd-1 {
+	width: 111.5px;height: 23.5px;
+	background-position: -412.5px -384.5px;
+}
+
+.page-2 .item-hd-2 {
+	width: 132px;height: 24.5px;
+	background-position: -414.5px -416.5px;
+}
+
+.page-2 .item-hd-3 {
+	width: 134px;height: 24.5px;
+	background-position: -414.5px -451px;
+}
+
+.page-2 .item-txt-1 {
+	width: 129.5px;height: 12.5px;
+	background-position: -316.5px -487px;
+}
+
+.page-2 .item-txt-2 {
+	width: 144px;height: 12.5px;
+	background-position: -316.5px -517px;
+}
+
+.page-2 .item-txt-3 {
+	width: 143.5px;height: 13px;
+	background-position: -317.5px -546px;
+}
+
+/*第三页*/
+
+#container .page-3 {
+	background-color: #ffdb5d;
+	padding-top: .755rem;
+}
+
+.page-3 .bg-star {
+	position: absolute;
+	width: 15px;height: 14.5px;
+	background-position: 0 -675.5px;
+	overflow: visible;
+}
+
+/*斜线*/
+.page-3 .bg-star::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;left: 100%;
+	width: 400px;height: 2px;
+	background: hsla(0,0%,100%,.4);
+	transform-origin: 0 100%;
+	transform: rotate(-45deg);
+}
+
+.page-3 .bg-star-1 {
+	left: .175rem;top: 1.1rem;
+}
+
+.page-3 .bg-star-2 {
+	right: .44rem;top: .73rem;
+}
+
+.page-3 .header-img {
+	position: relative;
+	width: 129px;height: 129px;
+	margin: 0 auto;
+	border-radius: 50%;
+	background: #ffea9f;
+	border: 6px solid #8f7109;
+}
+
+.page-3 .header-hd {
+	width: 167px;height: 40px;
+	background-position: -312px -571px;
+	margin: -51.5px auto .155rem;
+}
+
+.page-3 .bg-shadow {
+	position: absolute;
+	top: -1px;left: -19px;
+	width: 286px;height: 253px;
+	background-position: -514px 0;
+}
+
+.page-3 .header-txt {
+	text-align: center;
+	font-size: 15.159px;
+	line-height: 1;
+}
