@@ -18,10 +18,10 @@ li {
 	display: block;
 }
 
-.page-1 .bg-star, .page-1 .top, .page-1 .item, .page-2 .header, .page-2 .item-img, .page-2 .item-hd, .page-2 .item-txt, .page-3 .bg-star, .page-3 .header-hd, .page-3 .bg-shadow, .page-3 .middle, .page-3 .content-1 .bg-building, .page-3 .content-2 .bg-star-b, .page-3 .content-3 .bg-rocket, .page-3 .content-1 .bg-connect, .page-3 .bottom .left, .page-3 .bottom .right {
+.page-1 .bg-star, .page-1 .top, .page-1 .item, .page-2 .header, .page-2 .item-img, .page-2 .item-hd, .page-2 .item-txt, .page-3 .bg-star, .page-3 .header-hd, .page-3 .bg-shadow, .page-3 .middle, .page-3 .content-1 .bg-building, .page-3 .content-2 .bg-star-b, .page-3 .content-3 .bg-rocket, .page-3 .content-1 .bg-connect, .page-3 .bottom .left, .page-3 .bottom .right, .page-4 .header {
 	display: block;
 	background: url(../img/sprite.png);
-	background-size: 945px 708.5px;
+	background-size: 945px 800px;
 	background-repeat: no-repeat;
 	background-clip: content-box;
 	background-origin: content-box;
@@ -206,19 +206,19 @@ li {
 	margin: 0 auto;
 	border-radius: 50%;
 	background: #ffea9f;
-	border: 6px solid #8f7109;
+	border: 3px solid #8f7109;
 }
 
 .page-3 .bg-shadow {
 	position: absolute;
-	top: -1px;left: -19px;
+	top: -2px;left: -19px;
 	width: 286px;height: 253px;
 	background-position: -514px 0;
 }
 
 .page-3 .header-mask {
 	position: absolute;
-	top: -6px;left: -6px;
+	top: -3px;left: -3px;
 	width: inherit;height: inherit;
 	border: inherit;
 	background: inherit;
@@ -258,6 +258,7 @@ li {
 	background-color: #d4b137;
 	background-position: -524.5px -269.5px;
 	background-clip: border-box;
+	box-sizing: border-box;
 }
 
 .page-3 .container {
@@ -307,7 +308,7 @@ li {
 }
 
 .page-3 .content-3 {
-	margin: 28px 0 .175rem 13px;
+	margin: 28px 0 .36rem 13px;
 }
 
 .page-3 .content-3 .bg-rocket {
@@ -319,7 +320,7 @@ li {
 
 .page-3 .bottom {
 	position: relative;
-	width: 214px;
+	width: 195px;
 	margin: 0 auto;
 }
 
@@ -333,4 +334,17 @@ li {
 	bottom: 0;right: 0;
 	width: 115px;height: 114.5px;
 	background-position: -561.5px -340.5px;
+}
+
+/*第四页*/
+
+#container .page-4 {
+	background-color: #8ad160;
+	padding-top: .785rem;
+}
+
+.page-4 .header {
+	width: 237.5px;height: 185.5px;
+	background-position: -301px -612px;
+	margin: 0 auto;
 }
