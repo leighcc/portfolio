@@ -11,14 +11,15 @@ html {
 body, h1, h2, h3, p, ul {
 	margin: 0;
 	padding: 0;
-	font: 12px Microsoft Yahei, sans-serif;
+	font: 12px / 1 Microsoft Yahei, sans-serif;
 }
 
 li {
 	display: block;
 }
 
-.page-1 .bg-star, .page-1 .top, .page-1 .item, .page-2 .header, .page-2 .item-img, .page-2 .item-hd, .page-2 .item-txt, .page-3 .bg-star, .page-3 .header-hd, .page-3 .bg-shadow {
+.page-1 .bg-star, .page-1 .top, .page-1 .item, .page-2 .header, .page-2 .item-img, .page-2 .item-hd, .page-2 .item-txt, .page-3 .bg-star, .page-3 .header-hd, .page-3 .bg-shadow, .page-3 .middle, .page-3 .content-1 .bg-building, .page-3 .content-2 .bg-star-b, .page-3 .content-3 .bg-rocket, .page-3 .content-1 .bg-connect, .page-3 .bottom .left, .page-3 .bottom .right {
+	display: block;
 	background: url(../img/sprite.png);
 	background-size: 945px 708.5px;
 	background-repeat: no-repeat;
@@ -31,7 +32,9 @@ li {
 
 #container .page {
 	position: relative;
+	overflow: hidden;
 	background-color: #ed5b44;
+	box-sizing: border-box;
 }
 
 /*第一页*/
@@ -87,8 +90,6 @@ li {
 
 #container .page-2 {
 	background-color: #ff8c3e;
-	/*盖住第三页的斜线*/
-	z-index: 1;
 }
 
 .page-2 .header {
@@ -208,12 +209,6 @@ li {
 	border: 6px solid #8f7109;
 }
 
-.page-3 .header-hd {
-	width: 167px;height: 40px;
-	background-position: -312px -571px;
-	margin: -51.5px auto .155rem;
-}
-
 .page-3 .bg-shadow {
 	position: absolute;
 	top: -1px;left: -19px;
@@ -221,8 +216,121 @@ li {
 	background-position: -514px 0;
 }
 
+.page-3 .header-mask {
+	position: absolute;
+	top: -6px;left: -6px;
+	width: inherit;height: inherit;
+	border: inherit;
+	background: inherit;
+	border-radius: inherit;
+}
+
+.page-3 .header-img img {
+	position: absolute;
+	width: inherit;height: inherit;
+	border-radius: inherit;
+	text-align: center;
+}
+
+.page-3 .header-hd {
+	position: absolute;
+	bottom: 9px;left: -19.5px;
+	width: 167px;height: 40px;
+	background-position: -312px -571px;
+	text-indent: 200%;
+}
+
 .page-3 .header-txt {
+	position: relative;
+	z-index: 1;
+	margin-top: .04rem;
 	text-align: center;
 	font-size: 15.159px;
-	line-height: 1;
+}
+
+.page-3 .middle {
+	position: relative;
+	z-index: 1;
+	width: 232px;height: 42px;
+	margin: .14rem auto 0;
+	padding: 4px 0 0 10.5px;
+	border-radius: 10px;
+	background-color: #d4b137;
+	background-position: -524.5px -269.5px;
+	background-clip: border-box;
+}
+
+.page-3 .container {
+	width: 235px;
+	margin: 0 auto;
+}
+
+.page-3 .content {
+	position: relative;
+	font-size: 13px;
+}
+
+/*红色字体*/
+.page-3 .content .content-inner {
+	font-size: 17.5px;
+	color: #fd583f;
+}
+
+.page-3 .content-1 {
+	margin: .29rem 0 35px;
+}
+
+.page-3 .content-1 .bg-building {
+	position: absolute;
+	top: -20px;right: -18px;
+	width: 20px;height: 65.5px;
+	background-position: -479px -493.5px;
+}
+
+.page-3 .content-1 .bg-connect {
+	position: absolute;
+	top: 22px;right: 17.5px;
+	width: 183.5px;height: 115.5px;
+	background-position: -577px -487px;
+}
+
+.page-3 .content-2 {
+	margin-right: 28.5px;
+	text-align: right;
+}
+
+.page-3 .content-2 .bg-star-b {
+	position: absolute;
+	top: -20px;left: -7.5px;
+	width: 42.5px;height: 40px;
+	background-position: -494.5px -571px;
+}
+
+.page-3 .content-3 {
+	margin: 28px 0 .175rem 13px;
+}
+
+.page-3 .content-3 .bg-rocket {
+	position: absolute;
+	top: -7px;right: -12.5px;
+	width: 23px;height: 50.5px;
+	background-position: -523px -494px;
+}
+
+.page-3 .bottom {
+	position: relative;
+	width: 214px;
+	margin: 0 auto;
+}
+
+.page-3 .bottom .left {
+	width: 89px;height: 95.5px;
+	background-position: -698px -344px;
+}
+
+.page-3 .bottom .right {
+	position: absolute;
+	bottom: 0;right: 0;
+	width: 115px;height: 114.5px;
+	background-position: -561.5px -340.5px;
 }
