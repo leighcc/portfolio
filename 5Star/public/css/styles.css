@@ -18,7 +18,7 @@ li {
 	display: block;
 }
 
-.page-1 .bg-star, .page-1 .top, .page-1 .item, .page-2 .header, .page-2 .item-img, .page-2 .item-hd, .page-2 .item-txt, .page-3 .bg-star, .page-3 .header-hd, .page-3 .bg-shadow, .page-3 .middle, .page-3 .content-1 .bg-building, .page-3 .content-2 .bg-star-b, .page-3 .content-3 .bg-rocket, .page-3 .content-1 .bg-connect, .page-3 .bottom .left, .page-3 .bottom .right, .page-4 .header, .page-4 .comment .btn, .page-5 .bg-stripe, .page-5 .bg-penguin, .page-5 .bg-jewel .item, .page-5 .bg-stripe .header {
+.page-1 .bg-star, .page-1 .top, .page-1 .item, .page-2 .header, .page-2 .item-img, .page-2 .item-hd, .page-2 .item-txt, .page-3 .bg-star, .page-3 .header-hd, .page-3 .bg-shadow, .page-3 .middle, .page-3 .content-1 .bg-building, .page-3 .content-2 .bg-star-b, .page-3 .content-3 .bg-rocket, .page-3 .content-1 .bg-connect, .page-3 .bottom .left, .page-3 .bottom .right, .page-4 .header, .page-4 .comment .btn, .page-5 .bg-stripe, .page-5 .bg-penguin, .page-5 .bg-jewel .item, .page-5 .bg-stripe .header, .page-5 .wellfare-item-1 .img-1, .page-5 .wellfare-item-1 .img-2, .page-5 .wellfare-item-1 .img-2, .page-5 .wellfare-item-2 .img, .page-5 .wellfare-item-3 .img, .page-5 .wellfare-item-4 .img, .page-6 .bg-star, .page-6 .top {
 	display: block;
 	background: url(../img/sprite.png);
 	background-size: 1150px 1025px;
@@ -467,6 +467,7 @@ li {
 /*第五页*/
 
 #container .page-5 {
+	position: relative;
 	background-color: #589eec;
 }
 
@@ -523,11 +524,94 @@ li {
 	background-position: -557.5px -633px;
 }
 
+/*表格*/
 .page-5 .wellfare {
 	display: flex;
-	/*width: 100%;*/
-	/*flex-basis: 50%;*/
-	border-top: 2px solid #74a7f1;
+	flex-wrap: wrap;
+	position: absolute;
+	bottom: 0;left: 0;right: 0;
 }
 
+.page-5 .wellfare::before {
+	content: '';
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-1px);
+	width: 2px;height: 100%;
+	background: #74a7f1;
+}
 
+.page-5 .wellfare-item {
+	width: 50%;
+}
+
+.page-5 .wellfare-item-1, .page-5 .wellfare-item-2 {
+	border: 2px solid #74a7f1;
+	border-left: none;
+	border-right: none;
+}
+
+.page-5 .wellfare-item .header {
+	font-size: 15px;
+	text-align: center;
+	color: #fcff00;
+}
+
+.page-5 .wellfare-item .content {
+	margin: .1rem .11rem .165rem;
+	font-size: 12px;
+	line-height: 1.416;
+	color: #fff;
+}
+
+.page-5 .wellfare-item .img-container {
+	text-align: center;
+	margin: .135rem 0 .11rem;
+}
+
+.page-5 .wellfare-item .img {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/*sprite开始*/
+.page-5 .wellfare-item-1 .img-1 {
+	width: 48.5px;height: 48.5px;
+	margin-right: 14px;
+	background-position: -744px -633px;
+}
+
+.page-5 .wellfare-item-1 .img-2 {
+	width: 41.5px;height: 55px;
+	background-position: -233.5px -681.5px;
+}
+
+.page-5 .wellfare-item-2 .img {
+	width: 53px;height: 54.5px;
+	background-position: -557.5px -689.5px;
+}
+
+.page-5 .wellfare-item-3 .img {
+	width: 82px;height: 34.5px;
+	background-position: -625px -689.5px;
+}
+
+.page-5 .wellfare-item-4 .img {
+	width: 44px;height: 32px;
+	background-position: -744px -689.5px;
+}
+/*sprite结束*/
+
+/*第六页*/
+
+.page-6 .bg-star {
+	width: 303.5px;height: 451.5px;
+	margin: .1rem auto 0;
+	background-position: -822px 0;
+}
+
+.page-6 .top {
+	width: 254px;height: 119.5px;
+	background-position: -557.5px -757px;
+}
