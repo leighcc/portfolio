@@ -2,11 +2,11 @@ html {
 	font-size: 100px;
 }
 
-@media (min-device-width: 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2) {
+/*@media (min-device-width: 375px) and (max-device-width : 667px) and (-webkit-min-device-pixel-ratio : 2) {
 	html {
 		font-size: 117.1875px;
 	}
-}
+}*/
 
 body, h1, h2, h3, p, ul, button {
 	margin: 0;
@@ -97,6 +97,15 @@ li {
 	padding-top: .865rem;
 	margin: 0 auto;
 	background-position: 0 -580px;
+}
+
+.page-2 .bottom {
+	opacity: 0;
+}
+
+.page-2.page-active .bottom {
+	opacity: 1;
+	transition: all 1.5s linear;
 }
 
 /* 背景光影 */

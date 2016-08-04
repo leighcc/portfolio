@@ -145,8 +145,12 @@
 	</div>
 <script type="application/javascript" src="http://localhost:35729/livereload.js"></script>
 <script type="application/javascript" src="build/js/min.slip.js"></script>
+<script type="application/javascript" src="build/js/index.js"></script>
 <script>
-	Slip(document.getElementById('container'), 'y').webapp();
+	document.documentElement.style.fontSize = document.documentElement.clientWidth / 3.2 + 'px';
+	// window.addEventListener("resize", function () {
+	// 	document.documentElement.clientWidth / 3.2 + 'px';
+	// }, true);
 </script>
 </body>
 </html>
