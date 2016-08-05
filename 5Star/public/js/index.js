@@ -1,12 +1,24 @@
-var slip = Slip(document.getElementById('container'), 'y').webapp(),
-	Pages = document.getElementsByClassName('page');
+// 给当前页面添加page-active类名
+(function () {
+    var slip = Slip(document.getElementById('container'), 'y').webapp(),
+        Pages = document.getElementsByClassName('page');
 
-slip.end(function () {
-	for (var i = 0; i < Pages.length; i++) {
-		removeClass(Pages[i], 'page-active');
-	}
-	addClass(Pages[this.page], 'page-active');
-});
+    slip.end(function () {
+        for (var i = 0; i < Pages.length; i++) {
+            removeClass(Pages[i], 'page-active');
+        }
+        addClass(Pages[this.page], 'page-active');
+    });
+})();
+
+// 第一页的top完成第一次动画后删除bounceIn类
+(function () {
+    var top = document.getElementsByClassName('page-1')[0].getElementsByClassName('top')[0];
+
+    top.addEventListener('animationend', function () {
+        removeClass(top, 'bounceIn');
+    });
+})();
 
 // 显示评价详情
 (function () {
