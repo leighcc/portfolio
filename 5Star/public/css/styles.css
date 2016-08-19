@@ -30,6 +30,10 @@ li {
 	white-space: nowrap;
 }
 
+.page-1 .item-1 .item-body, .page-1 .item-1 .item-hand-1, .page-1 .item-1 .item-hand-2, .page-1 .item-1 .item-stroke {
+	background: url(../img/page-1.png);
+}
+
 #container .page {
 	position: relative;
 	overflow: hidden;
@@ -78,7 +82,30 @@ li {
 	position: absolute;
 	width: 75px;height: 88px;
 	left: .295rem;bottom: 1.525rem;
-	background-position: -316px -159px;
+	/*background-position: -316px -159px;*/
+}
+
+.page-1 .item-1 .item-body {
+	position: absolute;
+	width: 100%;height: 100%;
+}
+
+.page-1 .item-1 .item-hand-1 {
+	position: absolute;
+	width: 22px;height: 17.5px;
+	background-position: 0 -96.5px;
+}
+
+.page-1 .item-1 .item-hand-2 {
+	position: absolute;
+	width: 16px;height: 21px;
+	background-position: 0 -125px;
+}
+
+.page-1 .item-1 .item-stroke {
+	position: absolute;
+	width: 32.5px;height: 31px;
+	background-position: -35px -96.5px;
 }
 
 .page-1 .item-2 {
