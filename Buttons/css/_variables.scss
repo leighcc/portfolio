@@ -1,0 +1,40 @@
+// Font
+$font-family-base: Quicksand,arial,sans-serif;
+
+// Buttons
+$btn-padding-y: .25rem !default;
+$btn-padding-x: .625rem !default;
+
+$btn-padding-x-lg: .6rem !default;
+$btn-padding-y-lg: .25rem !default;
+
+$btn-font-size: 1rem !default;
+$btn-font-size-lg: 1.25rem !default;
+
+$btn-border-radius: .25rem !default;
+$btn-border-radius-lg: .2rem !default;
+
+$btn-box-shadow: #000 !default;
+
+$btn-primary-color: #fff !default;
+$btn-primary-bg: #1d89ff !default;
+$btn-primary-border: $btn-primary-bg !default;
+
+$btn-warning-color: #fff !default;
+$btn-warning-bg: #feab3a !default;
+$btn-warning-border: $btn-warning-bg !default;
+
+$btn-danger-color: #fff !default;
+$btn-danger-bg: #FF5964 !default;
+$btn-danger-border: $btn-danger-bg;
+
+$btn-success-color: #fff !default;
+$btn-success-bg: #28B78D !default;
+$btn-success-border: $btn-success-bg;
+
+$btn-info-color: #fff !default;
+$btn-info-bg: #bd2df5 !default;
+$btn-info-border: $btn-info-bg;
+
+// Animation
+$anim_func: cubic-bezier(.02, .01, .47, 1);

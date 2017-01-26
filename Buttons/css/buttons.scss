@@ -1,0 +1,132 @@
+// Core variables and mixins
+@import "variables";
+@import "mixins/buttons";
+
+// Based styles
+.btn {
+	display: inline-block;
+	position: relative;
+	border: 1px solid transparent;
+	font-family: $font-family-base;
+	cursor: pointer;
+	line-height: 1;
+	overflow: hidden;
+	transition: all 0.3s $anim_func;
+	@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
+
+	&:focus {
+		outline: 0;
+	}
+
+	&::before,
+	&::after {
+		transition: all 0.3s $anim_func;
+	}
+}
+
+// Alternate buttons
+.btn-primary {
+	@include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+.btn-warning {
+	@include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+}
+.btn-danger {
+	@include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+}
+.btn-success {
+	@include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+}
+.btn-info {
+	@include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+}
+
+// Remove all backgrounds
+.btn-outline-primary {
+	@include button-outline-variant($btn-primary-bg);
+}
+.btn-outline-warning {
+	@include button-outline-variant($btn-warning-bg);
+}
+.btn-outline-danger {
+	@include button-outline-variant($btn-danger-bg);
+}
+.btn-outline-success {
+	@include button-outline-variant($btn-success-bg);
+}
+.btn-outline-info {
+	@include button-outline-variant($btn-info-bg);
+}
+
+// Pill style
+.btn-pill-primary {
+	@include button-pill-variant($btn-primary-color, $btn-primary-bg);
+}
+.btn-pill-warning {
+	@include button-pill-variant($btn-warning-color, $btn-warning-bg);
+}
+.btn-pill-danger {
+	@include button-pill-variant($btn-danger-color, $btn-danger-bg);
+}
+.btn-pill-success {
+	@include button-pill-variant($btn-success-color, $btn-success-bg);
+}
+.btn-pill-info {
+	@include button-pill-variant($btn-info-color, $btn-info-bg);
+}
+
+// Remove pill background
+.btn-pill-outline-primary {
+	@include button-pill-outline-variant($btn-primary-bg);
+}
+.btn-pill-outline-warning {
+	@include button-pill-outline-variant($btn-warning-bg);
+}
+.btn-pill-outline-danger {
+	@include button-pill-outline-variant($btn-danger-bg);
+}
+.btn-pill-outline-success {
+	@include button-pill-outline-variant($btn-success-bg);
+}
+.btn-pill-outline-info {
+	@include button-pill-outline-variant($btn-info-bg);
+}
+
+// Underline style
+.btn-underline-primary {
+	@include button-underline-variant($btn-primary-bg);
+}
+.btn-underline-warning {
+	@include button-underline-variant($btn-warning-bg);
+}
+.btn-underline-danger {
+	@include button-underline-variant($btn-danger-bg);
+}
+.btn-underline-success {
+	@include button-underline-variant($btn-success-bg);
+}
+.btn-underline-info {
+	@include button-underline-variant($btn-info-bg);
+}
+
+// Gradient style
+.btn-gradient-primary {
+	@include button-gradient-variant($btn-primary-color, $btn-primary-bg)
+}
+.btn-gradient-warning {
+	@include button-gradient-variant($btn-warning-color, $btn-warning-bg)
+}
+.btn-gradient-danger {
+	@include button-gradient-variant($btn-danger-color, $btn-danger-bg)
+}
+.btn-gradient-success {
+	@include button-gradient-variant($btn-success-color, $btn-success-bg)
+}
+.btn-gradient-info {
+	@include button-gradient-variant($btn-info-color, $btn-info-bg)
+}
+
+// Button sizes
+.btn-lg {
+	@include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
+}

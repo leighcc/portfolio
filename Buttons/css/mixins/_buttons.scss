@@ -1,0 +1,146 @@
+// Button sizes
+@mixin button-size($padding-y, $padding-x, $font-size, $border-radius) {
+	padding: $padding-y $padding-x;
+	font-size: $font-size;
+	border-radius: $border-radius;
+}
+
+// Button variants
+@mixin button-variant($color, $background, $border) {
+	color: $color;
+	background-color: $background;
+	border-color: $border;
+
+	&:hover {
+		opacity: .75;
+	}
+}
+
+@mixin button-outline-variant($color) {
+	color: $color;
+	background-image: none;
+	background-color: transparent;
+	border-color: transparentize($color, 0.6);
+
+	&:hover {
+		border-color: transparentize($color, 0.3);
+	}
+
+	&:focus,
+	&:active {
+		border: 1px dotted;
+		background-color: transparentize($color, 0.4);
+	}
+}
+
+@mixin button-pill-variant($color, $background) {
+	color: $color;
+	background-color: $background;
+	border-radius: ($btn-padding-y * 2 + 1rem) / 2;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;left: 0;
+		width: 100%;height: 100%;
+		border-radius: inherit;
+		background-color: $color;
+		opacity: 0;
+		transform: scale(.2);
+	}
+
+	&:hover {
+		&::before {
+			opacity: .15;
+			transform: scale(1.1);
+		}
+	}
+}
+
+@mixin button-pill-outline-variant($color) {
+	color: $color;
+	background-image: none;
+	background-color: transparent;
+	border-color: $color;
+	border-radius: ($btn-padding-y * 2 + 1rem) / 2;
+	// Overflow hidden works when translate3d is used
+	transform: translate3d(0, 0, 0);
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;top: 0;
+		width: 100%;height: 110%;
+		opacity: 0;
+		background-color: darken($color, 10%);
+		transform: translate3d(-120%, 0, 0) skewX(-20deg);
+		z-index: -1;
+	}
+
+	&:after {
+		background-color: $color;
+		// GPU acceleration
+		transform: translate3d(120%, 0, 0) skewX(-20deg);
+	}
+
+	&:hover {
+		color: #fff;
+		box-shadow: 0 1px 8px transparentize($btn-box-shadow, 0.7);
+
+		&::before {
+			opacity: 1;
+			// GPU acceleration, a line would appear when apply 50% on the x dimension
+			transform: translate3d(-49%, 0, 0) skewX(-20deg);
+		}
+
+		&::after {
+			opacity: 1;
+			// GPU acceleration
+			transform: translate3d(49%, 0, 0) skewX(-20deg);
+		}
+	}
+}
+
+@mixin button-underline-variant($color) {
+	color: $color;
+	background-color: transparent;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: $btn-padding-x;bottom: 0;
+		width: calc(100% - 2 * #{$btn-padding-x});height: 1px;
+		background-color: $color;
+	}
+
+	&:hover {
+		&::before {
+			width: 100%;
+			left: 0;
+		}
+	}
+}
+
+@mixin button-gradient-variant($color, $background) {
+	color: $color;
+	border-radius: ($btn-padding-y * 2 + 1rem) / 2;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+	border: 0;
+
+	@if($background == $btn-primary-bg) {
+		background-image: linear-gradient(#00BBD4, #3F51B5);
+	} @else if($background == $btn-warning-bg) {
+		background-image: linear-gradient(#feab3a, #f35626);
+	} @else if($background == $btn-danger-bg) {
+		background-image: linear-gradient(#ff97c2, #E91E63);
+	} @else if($background == $btn-success-bg) {
+		background-image: linear-gradient(#9CCC65, #009688);
+	} @else if($background == $btn-info-bg) {
+		background-image: linear-gradient(#9C27B0, #512DA8);
+	}
+
+	&:hover {
+		opacity: .75;
+	}
+}
