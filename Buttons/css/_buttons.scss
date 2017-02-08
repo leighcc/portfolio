@@ -6,11 +6,16 @@
 .btn {
 	display: inline-block;
 	position: relative;
-	border: 1px solid transparent;
+	border: 1px solid;
+	color: $btn-color;
+	background-color: $btn-bg;
+	border-color: $btn-border;
 	font-family: $font-family-base;
 	cursor: pointer;
 	line-height: 1;
+	vertical-align: bottom;
 	overflow: hidden;
+	text-decoration: none;
 	transition: all 0.3s $anim_func;
 	@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-border-radius);
 
@@ -18,10 +23,24 @@
 		outline: 0;
 	}
 
+	&.disabled,
+	&:disabled {
+		opacity: .4;
+		cursor: not-allowed;
+		pointer-events: none;
+	}
+
 	&::before,
 	&::after {
 		transition: all 0.3s $anim_func;
 	}
+}
+
+input {
+	padding: .5rem .75rem;
+	border: 1px solid $btn-border;
+	border-radius: $btn-border-radius;
+	outline: 0;
 }
 
 // Alternate buttons
@@ -42,6 +61,9 @@
 }
 
 // Remove all backgrounds
+.btn-outline {
+	@include button-outline-variant($btn-bg);
+}
 .btn-outline-primary {
 	@include button-outline-variant($btn-primary-bg);
 }
@@ -109,6 +131,23 @@
 	@include button-underline-variant($btn-info-bg);
 }
 
+// Doubleline style
+.btn-doubleline-primary {
+	@include button-doubleline-variant($btn-primary-bg);
+}
+.btn-doubleline-warning {
+	@include button-doubleline-variant($btn-warning-bg);
+}
+.btn-doubleline-danger {
+	@include button-doubleline-variant($btn-danger-bg);
+}
+.btn-doubleline-success {
+	@include button-doubleline-variant($btn-success-bg);
+}
+.btn-doubleline-info {
+	@include button-doubleline-variant($btn-info-bg);
+}
+
 // Gradient style
 .btn-gradient-primary {
 	@include button-gradient-variant($btn-primary-color, $btn-primary-bg)
@@ -129,4 +168,64 @@
 // Button sizes
 .btn-lg {
 	@include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-border-radius-lg);
+}
+.btn-sm {
+	@include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-border-radius-sm);
+}
+
+// Button groups
+.btn-group {
+	display: inline-flex;
+	vertical-align: bottom; // match .btn alignment given font-size hack above
+
+	// Prevent double borders when buttons are next to each other
+	.btn + .btn {
+		margin-left: -1px;
+	}
+
+	> .btn:first-child {
+		&:not(:last-child) {
+			@include border-right-radius(0);
+		}
+	}
+
+	> .btn:last-child {
+		&:not(:first-child) {
+			@include border-left-radius(0);
+		}
+	}
+
+	> .btn:not(:first-child):not(:last-child) {
+		border-radius: 0;
+	}
+}
+
+.btn-group-lg > .btn {
+	@extend .btn-lg;
+}
+
+.btn-group-sm > .btn {
+	@extend .btn-sm;
+}
+
+.input-group {
+	display: flex;
+
+	.btn {
+		line-height: 1.25;
+	}
+
+	> .btn:first-child, .form-control:first-child {
+		&:not(:last-child) {
+			// border-right: 0;
+			@include border-right-radius(0);
+		}
+	}
+
+	> .btn:last-child, .form-control:last-child {
+		&:not(:first-child) {
+			border-left: 0;
+			@include border-left-radius(0);
+		}
+	}
 }

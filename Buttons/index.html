@@ -3,21 +3,185 @@
     <head>
         <meta charset="utf-8">
         <title>Buttons</title>
-
         <link rel="stylesheet" href="build/buttons.css">
+        <script src="https://use.fontawesome.com/bc4c20b61a.js"></script>
     </head>
     <body>
-        <button class="btn btn-primary">Primary</button>
-        <button class="btn btn-warning">Warning</button>
-        <button class="btn btn-danger">Danger</button>
-        <button class="btn btn-success">Success</button>
-        <button class="btn btn-info">Info</button>
-        <button class="btn btn-outline-primary">Primary</button>
-        <button class="btn btn-pill-primary">Primary</button>
-        <button class="btn btn-pill-outline-primary">Primary</button>
-        <button class="btn btn-underline-primary">Primary</button>
-        <button class="btn btn-gradient-primary">Primary</button>
-        <button class="btn btn-primary btn-lg">Primary</button>
+        <!-- Header begins -->
+        <header>
+            <div class="container">
+                <h1>Buttons</h1>
+                <p>Simple CSS for buttons. To create a Primary Button, add the <code>btn btn-primary</code> classname to any <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> element.</p>
+                <button class="btn btn-primary">Button</button>
+                <a href="#" class="btn btn-primary">A link</a>
+            </div>
+        </header>
+        <!-- Header ends -->
+
+        <div class="container">
+
+            <!-- Nav begins -->
+            <ul class="nav">
+
+                <li class="nav-item">
+                    <input class="tab-checkbox" type="radio" id="tab1" name="tabs" checked>
+                    <label class="tab-label" for="tab1">Sizes</label>
+                    <div class="tab-content">
+                        <p>Fancy larger or smaller buttons? Add <code>.btn-lg</code> or <code>.btn-sm</code> for additional sizes.</p>
+                        <button class="btn btn-primary btn-lg">Large</button>
+                        <button class="btn btn-primary btn-sm">Small</button>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <input class="tab-checkbox" type="radio" id="tab2" name="tabs">
+                    <label class="tab-label" for="tab2">Semantic</label>
+                    <div class="tab-content">
+                        <p>Five predefined button styles, each serving its own semantic purpose.</p>
+                        <button class="btn btn-primary">Primary</button>
+                        <button class="btn btn-warning">Warning</button>
+                        <button class="btn btn-danger">Danger</button>
+                        <button class="btn btn-success">Success</button>
+                        <button class="btn btn-info">Info</button>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <input class="tab-checkbox" type="radio" id="tab3" name="tabs">
+                    <label class="tab-label" for="tab3">Disabled</label>
+                    <div class="tab-content">
+                        <p>To mark a button as disabled, add the <code>disabled</code> classname. Alternatively, add the "disabled" attribute directly to your button.</p>
+                        <button class="btn btn-primary" disabled>Attribute</button>
+                        <button class="btn btn-primary disabled">Class</button>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <input class="tab-checkbox" type="radio" id="tab4" name="tabs">
+                    <label class="tab-label" for="tab4">Active</label>
+                    <div class="tab-content">
+                        <p>To style a button so that it appears "pressed", add the <code>active</code> classname.</p>
+                        <button class="btn btn-primary active">Primary</button>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <input class="tab-checkbox" type="radio" id="tab5" name="tabs">
+                    <label class="tab-label" for="tab5">With icons</label>
+                    <div class="tab-content">
+                        <p>Incorporating icon fonts is easy. Put the Font Awesome CSS file on your page and use an <code>&lt;i&gt;</code> element within a button element.</p>
+                        <button class="btn btn-primary"><i class="fa fa-floppy-o"></i> Save</button>
+                        <button class="btn btn-primary"><i class="fa fa-pencil"></i> Edit</button>
+                    </div>
+                </li>
+
+            </ul>
+            <!-- Nav ends -->
+
+            <!-- Button group begins -->
+            <h2>Button Groups</h2>
+            <p>Group multiple buttons together on a single line.</p>
+            <div class="btn-group">
+                <button class="btn btn-primary">1</button>
+                <button class="btn btn-primary">2</button>
+                <button class="btn btn-primary">3</button>
+            </div>
+            <div class="btn-group">
+                <button class="btn btn-pill-primary">Pill1</button>
+                <button class="btn btn-pill-primary">Pill2</button>
+                <button class="btn btn-pill-primary">Pill3</button>
+            </div>
+
+            <!-- Nav begins -->
+            <ul class="nav">
+
+                <li class="nav-item">
+                    <input class="tab-checkbox" type="radio" id="tab21" name="tabs2" checked>
+                    <label class="tab-label" for="tab21">Sizes</label>
+                    <div class="tab-content">
+                        <p>Instead of applying button sizing classes to every button in a group, just add <code>.btn-group-*</code> to each <code>.btn-group</code>.</p>
+                        <div class="btn-group btn-group-lg">
+                            <button class="btn btn-primary">1</button>
+                            <button class="btn btn-primary">2</button>
+                            <button class="btn btn-primary">3</button>
+                        </div>
+                        <div class="btn-group btn-group-sm">
+                            <button class="btn btn-primary">1</button>
+                            <button class="btn btn-primary">2</button>
+                            <button class="btn btn-primary">3</button>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <input class="tab-checkbox" type="radio" id="tab22" name="tabs2">
+                    <label class="tab-label" for="tab22">With input</label>
+                    <div class="tab-content">
+                        <p class="input-group">
+                            <span class="btn btn-primary">Primary</span>
+                            <input type="text" class="form-control" placeholder="Input something">
+                        </p>
+                        <p class="input-group">
+                            <span class="btn">Primary</span>
+                            <input type="text" class="form-control" placeholder="Input something">
+                        </p>
+                    </div>
+                </li>
+
+            </ul>
+            <!-- Nav ends -->
+
+            <!-- Button group ends -->
+
+            <!-- Variation begins -->
+            <h2>Variations</h2>
+            <div class="row">
+                <div class="col">
+                    <h3 class="caption">Outline</h3>
+                    <pre><code>.btn-outline-primary</code></pre>
+                    <button class="btn btn-outline-primary">Primary</button>
+                    <div class="shadow"></div>
+                </div>
+                <div class="col">
+                    <h3 class="caption">Pill</h3>
+                    <pre><code>.btn-pill-primary</code></pre>
+                    <button class="btn btn-pill-primary">Primary</button>
+                    <div class="shadow"></div>
+                </div>
+                <div class="col">
+                    <h3 class="caption">Pill outline</h3>
+                    <pre><code>.btn-pill-outline-primary</code></pre>
+                    <button class="btn btn-pill-outline-primary">Primary</button>
+                    <div class="shadow"></div>
+                </div>
+                <div class="col">
+                    <h3 class="caption">Underline</h3>
+                    <pre><code>.btn-underline-primary</code></pre>
+                    <button class="btn btn-underline-primary">Primary</button>
+                    <div class="shadow"></div>
+                </div>
+                <div class="col">
+                    <h3 class="caption">Doubleline</h3>
+                    <pre><code>.btn-doubleline-primary</code></pre>
+                    <button class="btn btn-doubleline-primary">Primary</button>
+                    <div class="shadow"></div>
+                </div>
+                <div class="col">
+                    <h3 class="caption">Gradient</h3>
+                    <pre><code>.btn-gradient-primary</code></pre>
+                    <button class="btn btn-gradient-primary">Primary</button>
+                    <div class="shadow"></div>
+                </div>
+            </div>
+            <!-- Variation ends -->
+
+            <!-- Footer begins -->
+            <footer>
+                <p><a href="https://leighcc.github.io/ideal-waddle/" target="_blank">&copy Nicole</a></p>
+            </footer>
+            <!-- Footer ends -->
+
+        </div>
     </body>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Quicksand" />
 </html>

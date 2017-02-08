@@ -14,6 +14,11 @@
 	&:hover {
 		opacity: .75;
 	}
+
+	&.active,
+	&:active {
+		background-color: darken($background, 20%);
+	}
 }
 
 @mixin button-outline-variant($color) {
@@ -36,6 +41,7 @@
 @mixin button-pill-variant($color, $background) {
 	color: $color;
 	background-color: $background;
+	border: $background;
 	border-radius: ($btn-padding-y * 2 + 1rem) / 2;
 
 	&::before {
@@ -105,6 +111,7 @@
 @mixin button-underline-variant($color) {
 	color: $color;
 	background-color: transparent;
+	border-color: transparent;
 
 	&::before {
 		content: '';
@@ -119,6 +126,20 @@
 			width: 100%;
 			left: 0;
 		}
+	}
+}
+
+@mixin button-doubleline-variant($color) {
+	color: $color;
+	background-color: transparent;
+	border: 0;
+	background-image: linear-gradient($color, $color), linear-gradient($color, $color);
+	background-repeat: no-repeat, no-repeat;
+	background-size: 0 1px, 0 1px;
+	background-position: 50% 0, 50% 100%;
+
+	&:hover {
+		background-size: 100% 1px, 100% 1px;
 	}
 }
 
@@ -143,4 +164,14 @@
 	&:hover {
 		opacity: .75;
 	}
+}
+
+@mixin border-right-radius($radius) {
+	border-bottom-right-radius: $radius;
+	border-top-right-radius: $radius;
+}
+
+@mixin border-left-radius($radius) {
+	border-bottom-left-radius: $radius;
+	border-top-left-radius: $radius;
 }

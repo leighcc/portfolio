@@ -1,0 +1,131 @@
+@import "buttons";
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+body, input {
+	margin: 0;
+	font-family: $font-family-base;
+}
+
+ul {
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+
+	@media (max-width: 960px) {
+		padding: 0 40px;
+	}
+}
+
+header {
+	h1 {
+		text-shadow: 4px 3px 0 #fff, 9px 8px 0 rgba(0,0,0,0.15);
+	}
+}
+
+// Tabs
+.nav {
+	position: relative;
+	height: 7rem;
+	padding: 0;
+	margin: 2rem 0 3rem 0;
+
+	.nav-item {
+		display: inline-block;
+		list-style-type: none;
+
+		.tab-checkbox {
+			display: none;
+		}
+
+		.tab-label {
+			margin-right: .5em;
+			padding: .2em 0;
+			border-bottom: 2px solid rgba(0,0,0,.2);
+			font-weight: 700;
+			cursor: pointer;
+			opacity: .5;
+			transition: all 0.3s $anim_func;
+		}
+
+		.tab-content {
+			display: none;
+			position: absolute;
+			left: 0;top: 2rem;
+
+		}
+
+		.tab-checkbox:checked ~ .tab-label {
+			border-color: #000;
+			opacity: 1;
+		}
+
+		.tab-checkbox:checked ~ .tab-content {
+			display: block;
+		}
+	}
+}
+
+
+// Buttons variation
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 1rem 0;
+	color: $btn-primary-bg;
+}
+
+.col {
+	position: relative;
+	margin-bottom: 40px;
+	padding: 1rem 30px;
+	width: 200px;
+	border: 1px solid;
+	text-align: center;
+
+	@media (max-width: 960px) {
+		display: block;
+		box-sizing: border-box;
+		width: 100%;
+	}
+
+	pre {
+		white-space: pre-wrap;
+	}
+
+	button {
+		margin: 2rem 0 1rem;
+		position: relative;
+		z-index: 1;
+
+		& ~ .shadow {
+			position: absolute;
+			left: 0;top: 0;
+			width: 100%;height: 100%;
+			transition: box-shadow 0.3s $anim_func;
+		}
+
+		&:hover ~ .shadow {
+			box-shadow: 5px 5px 0 0;
+		}
+	}
+}
+
+footer {
+	border-top: 1px solid $btn-border;
+}

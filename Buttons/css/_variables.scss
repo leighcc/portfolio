@@ -2,19 +2,27 @@
 $font-family-base: Quicksand,arial,sans-serif;
 
 // Buttons
-$btn-padding-y: .25rem !default;
 $btn-padding-x: .625rem !default;
+$btn-padding-y: .25rem !default;
 
 $btn-padding-x-lg: .6rem !default;
 $btn-padding-y-lg: .25rem !default;
+$btn-padding-x-sm: .5rem !default;
+$btn-padding-y-sm: .2rem !default;
 
 $btn-font-size: 1rem !default;
 $btn-font-size-lg: 1.25rem !default;
+$btn-font-size-sm: .75rem !default;
 
 $btn-border-radius: .25rem !default;
 $btn-border-radius-lg: .2rem !default;
+$btn-border-radius-sm: .2rem !default;
 
 $btn-box-shadow: #000 !default;
+
+$btn-color: #fff !default;
+$btn-bg: #696969 !default;
+$btn-border: $btn-bg !default;
 
 $btn-primary-color: #fff !default;
 $btn-primary-bg: #1d89ff !default;
