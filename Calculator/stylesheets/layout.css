@@ -1,0 +1,103 @@
+html{
+	height: 100%;
+}
+
+body{
+	display: table;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+/* iPhone 垂直居中显示 */
+.container{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.iphone-container{
+	position: relative;
+}
+
+.iphone-header,
+.iphone-shadow,
+.iphone-statusbar,
+.statusbar-signal,
+.statusbar-battery,
+.iphone-screen{
+	position: absolute;
+}
+
+/* 移动端下仅显示 .iphone-screen 里的内容，加上 .container 前缀提升优先级 */
+@media (max-width: 480px){
+
+	/* 取消 table 布局，否则设置高度为屏幕 100% 不能生效 */
+	body,
+	.container{
+		display: block;
+		height: 100%;
+	}
+
+	.container .iphone-container{
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.container .iphone-body{
+		display: none;
+	}
+
+	.container .iphone-screen{
+		position: static;
+		width: 100%;
+		height: 100%;
+	}
+
+	/* 移动端自适应 */
+	.container .screen-container{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.container .screen-keyboard{
+		display: flex;
+		flex-direction: column;
+
+		/* 占据屏幕的剩余空间 */
+		flex: 1;
+
+	    margin-bottom: 25px;
+	}
+	
+	/* 由于 btn 设置了 height: 100%; 会导致 row 不能 shrink，因此要将 row 要变为弹性盒子 */
+	.container .row{
+		flex: 1;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.container .row:after{
+		display: none;
+	}
+
+	.container .row:last-child{
+		margin-bottom: 0;
+	}
+	
+	/* iOS 必须显式将按键的高度重置为 auto 才可以让按键在副轴上伸缩 */
+	.container .btn{
+		height: auto;
+	}
+}
+
+.screen-container{
+	width: 93.7%;
+	height: 100%;
+}
+
+/* 水平居中 */
+.center-block{
+	display: block;
+	margin: auto;
+}

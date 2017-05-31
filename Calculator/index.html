@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="x5-fullscreen" content="true">
+	<meta name="browsermode" content="application"/>
+	<title>calculator</title>
+	<link rel="stylesheet" href="build/stylesheets/style.css">
+	<!--[if IE 8]>
+    	<link rel="stylesheet" href="build/stylesheets/ie8.css">
+    <![endif]-->
+	<!--[if IE 9]>
+    	<link rel="stylesheet" href="build/stylesheets/ie9.css">
+    <![endif]-->
+</head>
+<body>
+	<!--[if IE 8]>
+	<div class="background"><img class="image" src="http://7xrci6.com1.z0.glb.clouddn.com/background.jpg" alt="background"></div>
+	<![endif]-->
+	<div class="container">
+		<div class="iphone-container center-block">
+
+			<!-- iPhone 壳体 -->
+			<div class="iphone-body">
+				<div class="iphone-statusbar">
+					<div class="statusbar-signal"></div>
+					<span>1:23 PM</span>
+					<div class="statusbar-battery"></div>
+				</div>
+				<div class="iphone-shadow"></div>
+				<div class="iphone-header"></div>
+			</div>
+
+			<!-- 移动端下仅显示此部分内容 -->
+			<div class="iphone-screen">
+				<div class="screen-container center-block">
+
+					<!-- 标题 -->
+					<p class="screen-header">Calculator</p>
+					<div class="screen-shadow">
+
+						<!-- 输出框里层 -->
+						<div class="screen-output">
+							<p class="output-background">000000000000000000000000</p>
+							<p class="output-num">12456.</p>
+						</div>
+					</div>
+
+					<!-- 按键组 -->
+					<div class="screen-keyboard">
+						<div class="row">
+							<button class="btn btn-memory">mc</button>
+							<button class="btn btn-memory">m+</button>
+							<button class="btn btn-memory">m-</button>
+							<button class="btn btn-memory">mr</button>
+						</div>
+						<div class="row btn-talllocate">
+							<button class="btn btn-operate btn-delete">back<div class="delete-icon"></div></button>
+							<button class="btn btn-operate">%</button>
+							<button class="btn btn-operate">(</button>
+							<button class="btn btn-operate">)</button>
+						</div>
+						<div class="row">
+							<button class="btn btn-operate">C</button>
+							<button class="btn btn-operate">±</button>
+							<button class="btn btn-operate">/</button>
+							<button class="btn btn-operate">X</button>
+						</div>
+						<div class="row">
+							<button class="btn">7</button>
+							<button class="btn">8</button>
+							<button class="btn">9</button>
+							<button class="btn btn-operate btn-minus">-<div class="minus-icon"></div></button>
+						</div>
+						<div class="row">
+							<button class="btn">4</button>
+							<button class="btn">5</button>
+							<button class="btn">6</button>
+							<button class="btn btn-operate btn-plus">+<div class="plus-icon"></div></button>
+						</div>
+						<div class="row">
+							<button class="btn">1</button>
+							<button class="btn btn-longlocate">2</button>
+							<button class="btn">3</button>
+							<button class="btn btn-empty">
+								0
+								<!-- = 按钮需要放在里面，否则就算是绝对定位了，row 在对齐 button 的时候仍然按照有 5 个子元素来对齐 -->
+								<button class="btn btn-tall">=</button>
+							</button>
+							
+						</div>
+						<div class="row">
+							<button class="btn btn-long">0</button>
+							<button class="btn">.</button>
+							<button class="btn btn-empty">0</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="build/scripts/main.js"></script>
+</body>
+</html>

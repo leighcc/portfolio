@@ -1,0 +1,277 @@
+@import url("normalize.css");
+@import url("layout.css");
+
+@font-face {
+    font-family: 'DS-Digital';
+    src: url('../fonts/ds-digib-webfont.eot');
+    src: url('../fonts/ds-digib-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ds-digib-webfont.woff2') format('woff2'),
+         url('../fonts/ds-digib-webfont.woff') format('woff'),
+         url('../fonts/ds-digib-webfont.ttf') format('truetype'),
+         url('../fonts/ds-digib-webfont.svg#ds-digitalbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+	background-image: url("http://7xrci6.com1.z0.glb.clouddn.com/background.jpg");
+	background-position: center;
+	background-size: cover;
+}
+
+/* 移动端下不显示背景 */
+@media (max-width: 480px){
+	body{
+		background-image: none;
+	}
+}
+
+/* 雪碧图 */
+.iphone-header,
+.iphone-shadow,
+.statusbar-signal,
+.statusbar-battery,
+.delete-icon,
+.minus-icon,
+.plus-icon{
+	background-image: url("http://7xrci6.com1.z0.glb.clouddn.com/sprite-calculator.png");
+}
+
+.iphone-container{
+	width: 387.5px;
+	height: 798px;
+}
+
+/* iPhone 壳体 */
+.iphone-body{
+	width: 100%;
+	height: 885.5px;
+	background-image: url("http://7xrci6.com1.z0.glb.clouddn.com/iphone.png");
+	background-position: center;
+	background-size: 100%;
+}
+
+/* iPhone 听筒 */
+.iphone-header{
+	top: 35px;
+	left: 157px;
+	width: 69.5px;
+	height: 44px;
+	/*z-index: 2;*/
+}
+
+/* iPhone 反光效果 */
+.iphone-shadow{
+	top: 13px;
+	right: 14.5px;
+	width: 207px;
+	height: 568.5px;
+	background-position: 0 -51.5px;
+	/*z-index: 1;*/
+}
+
+/* iPhone 状态栏 */
+.iphone-statusbar{
+	top: 118.5px;
+	left: 32.5px;
+	width: 320px;
+	height: 20px;
+	font: bold 14px/20px Arial, sans-serif;
+	text-align: center;
+	color: #d4d3d3;
+	background-color: #525151;
+}
+
+/* 信号指示 */
+.statusbar-signal{
+	top: 4px;
+	left: 3.5px;
+	width: 20px;
+	height: 10.5px;
+	background-position: -83.5px 0;
+}
+
+/* 电源指示 */
+.statusbar-battery{
+	top: 3px;
+	right: 3px;
+	width: 22px;
+	height: 12.5px;
+	background-position: -122px 0;
+}
+
+/* 移动端仅显示从这里开始的部分 */
+.iphone-screen{
+	top: 138.5px;
+	left: 32.5px;
+	width: 320px;
+	height: 548px;
+	overflow: hidden;
+	background-color: #cccbca;
+}
+
+/* 标题 calculator */
+.screen-header{
+	margin: 10px 0 0;
+	font: 16px/1 Calibri, sans-serif;
+	text-align: center;
+	color: #807e7c;
+}
+
+/* 输出框外层的阴影 */
+.screen-shadow{
+	box-sizing: border-box;
+	width: 100%;
+	padding: 3px;
+	margin-top: 6px;
+	margin-bottom: 15.5px;
+	box-shadow: inset 0 1px 4px #939393;
+	border-radius: 4px;
+}
+
+/* 输出框里层 */
+.screen-output{
+	position: relative;
+	box-sizing: border-box;
+	width: 100%;
+	height: 51.5px;
+	border: 2px solid #3a3a3a;
+	overflow: hidden;
+	font: 33px/47.5px DS-Digital, sans-serif;
+	color: #d0cfbf;
+	background-color: #c4c3ac;
+	border-radius: 4px;
+}
+
+/* 背景 0 */
+.output-background{
+	position: absolute;
+	left: 11px;
+	right: 11px;
+	margin: 0;
+	overflow: hidden;
+}
+
+/* 计算结果 */
+.output-num{
+	position: absolute;
+	top: 0;
+	right: 11px;
+	margin: 0;
+	color: #272727;
+	background-color: #c4c3ac;
+}
+
+/* 按键组 */
+.screen-keyboard{
+	width: 100%;
+	height: 416.5px;
+}
+
+/* 一行按键 */
+.row{
+	position: relative;
+	width: 100%;
+	height: .5rem;
+	margin-bottom: .1rem;
+
+	/* 清除 UC 浏览器中大于子元素的高度 */
+	line-height: 0;
+	
+	/* chrome 在 font-size 太大的时候不能对齐 */
+	font-size: 19px;
+
+	text-align: justify;
+}
+
+/* 添加伪元素以使按键可以两端对齐 */
+.row:after{
+	content: '';
+	display: inline-block;
+	width: 100%;
+}
+
+/* 通用的按键 */
+.btn{
+	width: .675rem;
+	height: 100%;
+	padding: 0;
+	border: 0;
+	font: bold 19px Arial, sans-serif;
+	color: #202020;
+	border-radius: .3em;
+	background-image: linear-gradient(#fffffd, #e5e5e5);
+	background-color: #e5e5e5;
+	box-shadow: 0 3px 4px rgba(0,0,0,.6);
+}
+
+/* 去掉默认的一圈蓝色的边 */
+.btn:focus{
+	outline: 0;
+}
+
+/* 模拟按下去的效果 */
+.btn:active{
+	box-shadow: none;
+	background-image: none;
+}
+
+/* 不同类型的按键对应不同的背景和颜色 */
+.btn-memory{
+	color: #ffffff;
+	background-image: linear-gradient(#626262, #434340);
+	background-color: #626262;
+}
+
+.btn-operate{
+	color: #ffffff;
+	background-image: linear-gradient(#878787, #686868);
+	background-color: #686868;
+}
+
+.btn-delete,
+.btn-minus,
+.btn-plus{
+	position: relative;
+	text-indent: 9999px;
+}
+
+.delete-icon,
+.minus-icon,
+.plus-icon{
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+	width: 30px;
+	height: 12.5px;
+	background-position: -83.5px -19px;
+}
+
+.minus-icon{
+	width: 15px;
+	height: 15px;
+	background-position: -148px 0;
+}
+
+.plus-icon{
+	width: 15px;
+	height: 3px;
+	background-position: -148px -19px;
+}
+
+.btn-tall{
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	color: #ffffff;
+	background-image: linear-gradient(#6abeff, #467eca);
+	background-color: #467eca;
+}
+
+.btn-empty{
+	visibility: hidden;
+}

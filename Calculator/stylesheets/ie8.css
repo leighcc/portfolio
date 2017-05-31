@@ -1,0 +1,96 @@
+body{
+	background-image: none;
+}
+
+/* 全屏的背景 */
+.background{
+	width: 100%;
+	height: 100%;
+	min-height: 885.5px;
+	position: absolute;
+	overflow: hidden;
+}
+
+.image{
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+	width: 100%;
+}
+
+.btn,
+.screen-shadow,
+.screen-output{
+	background-image: url("http://7xrci6.com1.z0.glb.clouddn.com/IE8.png");
+}
+
+.iphone-body{
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://7xrci6.com1.z0.glb.clouddn.com/iphone.png", sizingMethod="scale");
+}
+
+.screen-container{
+	width: 300.5px;
+}
+
+/* 输出框外层的阴影 */
+.screen-shadow{
+	background-position: 0 -241px;
+}
+
+/* 输出框里层 */
+.screen-output{
+	height: 51.5px;
+	border: none;
+	line-height: 47px;
+	background-position: 0 -304.5px;
+}
+
+/* 背景 0 */
+.output-background{
+	top: 2px;
+	left: 13px;
+	right: 13px;
+}
+
+/* 计算结果 */
+.output-num{
+	top: 2px;
+	right: 13px;
+}
+
+.screen-keyboard{
+	/*加上阴影要比父元素大 4px*/
+	width: 304.5px;
+	margin-left: -2px;
+}
+
+.btn{
+	width: 71.5px;
+	height: 56px;
+
+	/* 切图的时候把阴影切进去，尺寸比实际的大，因此文字应往上移一点 */
+	padding-bottom: 1.5px;
+	
+	background-position: 0 -182px;
+	background-color: transparent;
+}
+
+.btn-memory{
+	background-position: 0 -62px;
+}
+
+.btn-operate{
+	background-position: 0 -122px;
+}
+
+.btn-long{
+	background-position: 0 0;
+}
+
+.btn-tall{
+	background-position: -77px -62px;
+}
